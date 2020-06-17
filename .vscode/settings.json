@@ -1,0 +1,11 @@
+{
+  "python.pythonPath": "venv-toby-blog\\Scripts\\python.exe",
+  "spellright.language": [
+    "en"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ]
+}
