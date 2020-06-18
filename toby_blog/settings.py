@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'blog_posts',
+    'home_page',
+    'static_pages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,15 +127,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-# STATIC FILES FINDER
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
+# # STATIC FILES FINDER
+# STATICFILES_FINDERS = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'sass_processor.finders.CssFinder',
+# ]
 
-# Django SASS
-SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
+# # Django SASS
+# SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
