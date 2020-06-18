@@ -1,18 +1,67 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@600;700;900&display=swap');
 
-// Font Variables
-$lora: 'Lora', sans-serif;
-$montserrat: 'Montserrat', sans-serif;
-$logo-font: 'Nunito Sans', sans-serif;
+@import './_colors.scss';
 
+// Font Variables
+$header: 'Lora', sans-serif;
+$mainText: 'Montserrat', sans-serif;
+$logoFont: 'Nunito Sans', sans-serif;
+
+
+// Mixins
+
+@mixin dFlex($jContent) {
+  display: flex;
+  justify-content: $jContent;
+}
+
+@mixin flexCenterVertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin flexBetweenVertical {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
 
 html {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  background-color: $backgroundWhite;
+  margin: 0;
+  padding: 0;
+  font-family: $mainText;;
+}
+
+@import './_navbar.scss';
+
+// Home / Hero
+
+#hero {
+  width: 100vw;
+  height: 60vh;
+  img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+}
+
+#last-post {
+  height: 100vh;
+}
+
+@import './footer';

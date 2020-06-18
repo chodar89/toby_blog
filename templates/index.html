@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="hero">
+  <div class="hero-container">
+    <img src="{% static 'img/bg_4.jpg' %}" alt="Hero Dev Blog Image">
+  </div>
+</section>
+<main>
+  <section id="last-post"></section>
+</main>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/navbar.js' %}"></script>
+{% endblock %}

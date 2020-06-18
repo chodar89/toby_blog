@@ -1,0 +1,103 @@
+nav {
+  @include dFlex(space-between);
+  position: fixed;
+  width: 100vw;
+  color: $headerColor;
+}
+
+.nav-bg {
+  height: 60px;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  transition: background-color ease-in-out 0.5s;
+}
+
+.nav-active {
+  background-color: $navColor;
+}
+
+.nav-line {
+  position: absolute;
+  top: 60px;
+  opacity: 0;
+  height: 2px;
+  width: 100vw;
+  z-index: -1;
+  background-color: $logoGreen;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.nav-logo {
+  background-color: $logoGreen;
+  width: 100px;
+  height: 100px;
+  color: $mainBlack;
+  text-transform: uppercase;
+  @include flexCenterVertical();
+  font-family: $logoFont;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 10px 0 0 10px;
+  span:nth-child(2) {
+    letter-spacing: 9px;
+    margin-left: 7px;
+  }
+
+  span {
+    margin: -4px 0;
+  }
+}
+
+.nav-links {
+  @include dFlex(center);
+  text-decoration: none;
+  list-style: none;
+  margin: 18px 0 0 0;
+  li {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    a {
+      color: $logoGreen;
+      text-decoration: none;
+      transition: color ease-in-out 0.2s;
+      &:hover {
+        color: $headerColor;
+      }
+    }
+  }
+}
+
+.nav-links-active {
+  color: $headerColor !important;
+  &:hover {
+    color: $logoGreen !important;
+  }
+}
+
+
+.nav-social {
+  font-size: 2.5rem;
+  margin-right: 30px;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+    color: $logoGreen;
+    margin-left: 4px;
+    transition: color ease-in-out 0.2s;
+    &:hover {
+      color: $headerColor;
+    }
+  }
+}
+
+.nav-social-active {
+  color: $headerColor !important;
+  &:hover {
+    color: $logoGreen !important;
+  }
+}

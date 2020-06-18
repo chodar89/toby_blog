@@ -3,14 +3,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Software Developer Blog">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Tech, Software Development, Blog, Python, Django, Flask, Junior Software Dev, UK, Poland">
+  <meta name="author" content="Tobiasz Chodarewicz">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOBY DEV BLOG</title>
+  <script src="https://kit.fontawesome.com/27e36e1e66.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'css-sass/skeleton.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css-sass/style.css' %}" type="text/css">
 </head>
 <body>
   {% include 'partials/_navbar.html' %}
   {% block content %}
+  {% endblock %}
+  {% include 'partials/_footer.html' %}
+  {% block js %}
   {% endblock %}
 </body>
 </html>

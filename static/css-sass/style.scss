@@ -7,12 +7,24 @@ $montserrat: 'Montserrat', sans-serif;
 $logo-font: 'Nunito Sans', sans-serif;
 
 
+// Mixins
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
 html {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  background-color: $backgroundWhite;
+}
+
+@import './navbar'
