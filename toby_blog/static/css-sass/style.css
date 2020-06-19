@@ -202,6 +202,10 @@ nav {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
+#blog {
+  position: relative;
+}
+
 #last-post {
   height: 100vh;
 }
@@ -308,6 +312,69 @@ nav {
 
 .mini-post-content .mini-post-footer p:first-child {
   font-weight: 600;
+}
+
+#search-post {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#search-card {
+  height: 300px;
+  width: 150px;
+  position: absolute;
+  right: -200px;
+  top: 40px;
+}
+
+#search-card hr {
+  border: 1px solid #2DE1C2;
+  margin: 15px 0;
+}
+
+#search-card .search-header {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+#search-card .search-popular li {
+  list-style: none;
+  font-weight: 600;
+}
+
+#search-card .search-popular span {
+  color: #2DE1C2;
+  font-weight: 800;
+}
+
+#search-card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#search-card form input {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+#search-card form input[type=text]:focus, #search-card form textarea:focus {
+  -webkit-box-shadow: 0 0 5px #2de1c2;
+          box-shadow: 0 0 5px #2de1c2;
+  border: 1px solid #2de1c2;
+}
+
+#search-card form label {
+  color: #2DE1C2;
+  font-weight: 600;
+  font-size: 2.5rem;
+  height: 30px;
 }
 
 footer {

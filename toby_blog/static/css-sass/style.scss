@@ -56,6 +56,10 @@ body {
 
 // BLOG PAGE STYLE
 
+#blog {
+  position: relative;
+}
+
 #last-post {
   height: 100vh;
 }
@@ -124,6 +128,58 @@ body {
       font-weight: 600;
     }
   }
+}
+
+#search-post {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#search-card {
+  height: 300px;
+  width: 150px;
+  position: absolute;
+  right: -200px;
+  top: 40px;
+  hr {
+    border: 1px solid $logoGreen;
+    margin: 15px 0;;
+  }
+  .search-header {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  .search-popular {
+    li {
+      list-style: none;
+      font-weight: 600;
+    }
+    span{
+      color: $logoGreen;
+      font-weight: 800;
+    }
+  }
+  form {
+    @include dFlex(center);
+    input {
+      width: 100%;
+      margin-bottom: 0;
+      border-radius: 0;
+      font-family: $mainText;
+    }
+    input[type=text]:focus, textarea:focus {
+      box-shadow: (0 0 5px rgba(45, 225, 194, 1));
+      border: 1px solid rgba(45, 225, 194, 1);
+    }
+    label {
+      color: $logoGreen;
+      font-weight: 600;
+      font-size: 2.5rem;
+      height: 30px;
+    }
+  }
+  
 }
 
 @import './footer';
