@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="hero">
+  <div class="hero-container">
+    <img src="{% static 'img/about_1.jpg' %}" alt="Hero Dev Blog Image">
+  </div>
+</section>
+<main>
+  <section id="about">
+    <h2>Few words about me and...</h2>
+    <p>No, it will be only about me ( ‾ ʖ̫ ‾). <br>
+      I am a young developer who loves to code and spend time either in front of a computer or travelling with my other half. So I thought that I would start writing about what I do and what I know. Maybe not too much :). I am joking... I hope that this blog will be able to help me an other developers that just started they jurney or they have willing to start. Also during my coding adventure, I found it difficult to find answers to some of the questions I had, so I'm going to describe them here. I also want to write down my development path, which I will be able to reconstruct in the future.</p>
+  </section>
+</main>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/navanimation.js' %}"></script>
+{% endblock %}

@@ -1,17 +1,17 @@
 <nav>
   <div 
-    {% if '/' != request.path %}
-      class="nav-bg nav-bg-white"
+    {% if '/' == request.path or '/about' == request.path %}
+      class="nav-bg"   
     {% else %}
-      class="nav-bg"
+      class="nav-bg nav-bg-white"
     {% endif %}
   >
   </div>
   <div 
-    {% if '/' != request.path %}
-      class="nav-line nav-line-active"
-    {% else %}
+    {% if '/' == request.path or '/about' == request.path %}
       class="nav-line"
+    {% else %}
+      class="nav-line nav-line-active"
     {% endif %}
   >
   </div>
@@ -21,10 +21,10 @@
     <span>blog</span>
   </div>
   <div 
-    {% if '/' != request.path %}
-      class="nav-links nav-links-dark"
-    {% else %}
+    {% if '/' == request.path or '/about' == request.path %}
       class="nav-links"
+    {% else %}
+      class="nav-links nav-links-dark"
     {% endif %}
   >
     <li 
@@ -37,7 +37,11 @@
     class="nav-link-active"
     {% endif %}
     ><a href="{% url 'blog' %}">Blog</a></li>
-    <li><a href="#">About</a></li>
+    <li
+    {% if '/about' == request.path %}
+    class="nav-link-active"
+    {% endif %}
+    ><a href="{% url 'about' %}">About</a></li>
     <li><a href="#">Inspirations</a></li>
   </div>
   <div class="nav-social">
