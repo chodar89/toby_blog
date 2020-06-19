@@ -1,14 +1,42 @@
 <nav>
-  <div class="nav-bg"></div>
-  <div class="nav-line"></div>
+  <div 
+    {% if '/' != request.path %}
+      class="nav-bg nav-bg-white"
+    {% else %}
+      class="nav-bg"
+    {% endif %}
+  >
+  </div>
+  <div 
+    {% if '/' != request.path %}
+      class="nav-line nav-line-active"
+    {% else %}
+      class="nav-line"
+    {% endif %}
+  >
+  </div>
   <div class="nav-logo">
     <span>toby</span>
     <span>dev</span>
     <span>blog</span>
   </div>
-  <div class="nav-links" >
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Blog</a></li>
+  <div 
+    {% if '/' != request.path %}
+      class="nav-links nav-links-dark"
+    {% else %}
+      class="nav-links"
+    {% endif %}
+  >
+    <li 
+    {% if '/' == request.path %}
+    class="nav-link-active"
+    {% endif %}
+    ><a href="{% url 'index' %}">Home</a></li>
+    <li
+    {% if '/blog/' == request.path %}
+    class="nav-link-active"
+    {% endif %}
+    ><a href="{% url 'blog' %}">Blog</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Inspirations</a></li>
   </div>

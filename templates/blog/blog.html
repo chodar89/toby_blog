@@ -1,4 +1,58 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-BLOG
+<main>
+  <aside id="search-post">
+    <div class="search-card">
+      <div> search input </div>
+      <div> most popular tags</div>
+    </div>
+  </aside>
+  <section id="mini-posts">
+    <div class="post-block">
+      <div class="mini-post-container">
+        <div class="row">
+          <div class="mini-post-img one-third column">
+            <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="" srcset="">
+          </div>
+          <div class="mini-post-content two-thirds column">
+            <div class="mini-post-header">
+              <h3>Blog Post Title</h3>
+            </div>
+            <div class="mini-post-text">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum amet atque deleniti neque voluptas sit? Alias reprehenderit provident, quod numquam quasi fuga voluptatum aliquam vitae a iusto facere quisquam! Sunt praesentium veritatis enim impedit laboriosam quia, eos officia tempore deserunt, aspernatur harum! Libero animi perferendis sequi tempora. </p>
+            </div>
+            <div class="mini-post-footer">
+              <p><span>#</span>softwaredevelopment, <span>#</span>flask, <span>#</span>javascript</p>
+              <p>29 Jun 2020 / 5 min read</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="post-block">
+      <div class="mini-post-container">
+        <div class="row">
+          <div class="mini-post-img one-third column">
+            <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="" srcset="">
+          </div>
+          <div class="mini-post-content two-thirds column">
+            <div class="mini-post-header">
+              <h3>Blog Post Title</h3>
+            </div>
+            <div class="mini-post-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora commodi accusantium eos quos consectetur voluptas fugit sed temporibus voluptatibus eius hic dolore iure iste, beatae dolorum delectus laborum consequuntur asperiores totam ratione, deleniti cumque sint natus. Tenetur accusantium delectus sapiente. </p>
+            </div>
+            <div class="mini-post-footer">
+              <p><span>#</span>softwaredevelopment, <span>#</span>django, <span>#</span>python</p>
+              <p>29 Jun 2020 / 5 min read</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}

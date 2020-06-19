@@ -2,10 +2,13 @@
 
 footer {
   @include flexBetweenVertical();
+  text-align: center;
   height: 300px;
+  width: 100vw;
   background-color: $footerColor;
   color: $footerText;
   border-top: 5px solid $footerText;
+  margin-top: 50px;
   hr {
     border-top: 2px solid $footerText;
     width: 70%;

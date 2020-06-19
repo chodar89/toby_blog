@@ -1,0 +1,31 @@
+#hero {
+  width: 100vw;
+  height: 60vh;
+  img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+}
+
+.hero-container {
+  position: relative;
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $textWhite;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  &::before{
+    content: '';
+    height: 60vh;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+  }
+}
+

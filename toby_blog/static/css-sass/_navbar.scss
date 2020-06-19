@@ -3,6 +3,7 @@ nav {
   position: fixed;
   width: 100vw;
   color: $headerColor;
+  z-index: 10;
 }
 
 .nav-bg {
@@ -14,8 +15,9 @@ nav {
   transition: background-color ease-in-out 0.5s;
 }
 
-.nav-active {
+.nav-bg-white {
   background-color: $navColor;
+  box-shadow: 0 0 9px black;
 }
 
 .nav-line {
@@ -27,6 +29,10 @@ nav {
   z-index: -1;
   background-color: $logoGreen;
   transition: opacity ease-in-out 0.5s;
+}
+
+.nav-line-active {
+  opacity: 1 !important;
 }
 
 .nav-logo {
@@ -72,11 +78,20 @@ nav {
   }
 }
 
-.nav-links-active {
-  color: $headerColor !important;
-  &:hover {
-    color: $logoGreen !important;
+.nav-links-dark {
+  li {
+    a {
+      color: $headerColor !important;
+      &:hover {
+        color: $logoGreen !important;
+      }
+    }
   }
+}
+
+.nav-link-active {
+  border-top: 2px solid $logoGreen;
+  margin-top: -2px;
 }
 
 
@@ -92,12 +107,5 @@ nav {
     &:hover {
       color: $headerColor;
     }
-  }
-}
-
-.nav-social-active {
-  color: $headerColor !important;
-  &:hover {
-    color: $logoGreen !important;
   }
 }

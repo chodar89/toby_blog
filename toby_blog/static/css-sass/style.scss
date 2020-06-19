@@ -20,14 +20,18 @@ $logoFont: 'Nunito Sans', sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
 }
 
 @mixin flexBetweenVertical {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  text-align: center;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -48,20 +52,78 @@ body {
 
 @import './_navbar.scss';
 
-// Home / Hero
+@import './hero';
 
-#hero {
-  width: 100vw;
-  height: 60vh;
+// BLOG PAGE STYLE
+
+#last-post {
+  height: 100vh;
+}
+
+#mini-posts {
+  @include flexCenterVertical();
+  width: 100%;
+  margin-top: 100px;
+  hr {
+    border-top: 2px solid $footerText;
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+.post-block {
+  @include flexCenterVertical();
+  height: 250px;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+.mini-post-container {
+  min-width: 800px;
+  max-width: 1100px;
+  margin-top: 27px;
+  
+}
+
+.mini-post-img {
   img {
-    width: 100vw;
-    height: 60vh;
+    width: 90%;
+    height: 250px;
     object-fit: cover;
   }
 }
 
-#last-post {
-  height: 100vh;
+.mini-post-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 250px;
+  .mini-post-header {
+    height: 40px;
+    h3 {
+      margin: 0;
+    }
+  }
+  .mini-post-text {
+    height: 160px;
+    p {
+      margin: 10px 0;
+    }
+  }
+  .mini-post-footer {
+    height: 50px;
+    p {
+      margin: 0;
+      span {
+        color: $logoGreen;
+        font-weight: 800;
+      }
+    }
+    p:first-child {
+      font-weight: 600;
+    }
+  }
 }
 
 @import './footer';
