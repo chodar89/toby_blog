@@ -1,6 +1,7 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@600;700;900&display=swap');
 
+// Import colors variables
 @import './_colors.scss';
 
 // Font Variables
@@ -50,136 +51,35 @@ body {
   font-family: $mainText;;
 }
 
+// Import style for navigation bar
 @import './_navbar.scss';
 
+// Import style for index/about hero
 @import './hero';
 
-// BLOG PAGE STYLE
+// Import style for blog
+@import './blog';
 
-#blog {
-  position: relative;
-}
+// About
 
-#last-post {
-  height: 100vh;
-}
-
-#mini-posts {
+#about {
   @include flexCenterVertical();
-  width: 100%;
-  margin-top: 100px;
   hr {
-    border-top: 2px solid $footerText;
+    border-top: solid 1px $headerColor;
     width: 100%;
-    margin-top: 35px;
-    margin-bottom: 10px;
+    width: 1100px;
   }
 }
 
-.post-block {
-  @include flexCenterVertical();
-  height: 250px;
-  margin-top: 60px;
-  margin-bottom: 25px;
+#about-me {
+  margin-top: 40px;
 }
 
-.mini-post-container {
-  min-width: 800px;
-  max-width: 1100px;
-  margin-top: 27px;
-  
+#about-me,
+#about-contact {
+  text-align: center;
+  width: 1100px;
 }
 
-.mini-post-img {
-  img {
-    width: 90%;
-    height: 250px;
-    object-fit: cover;
-  }
-}
-
-.mini-post-content {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 250px;
-  .mini-post-header {
-    height: 40px;
-    h3 {
-      margin: 0;
-    }
-  }
-  .mini-post-text {
-    height: 160px;
-    p {
-      margin: 10px 0;
-    }
-  }
-  .mini-post-footer {
-    height: 50px;
-    p {
-      margin: 0;
-      span {
-        color: $logoGreen;
-        font-weight: 800;
-      }
-    }
-    p:first-child {
-      font-weight: 600;
-    }
-  }
-}
-
-#search-post {
-  position: relative;
-  max-width: 1100px;
-  margin: auto;
-}
-
-#search-card {
-  height: 300px;
-  width: 150px;
-  position: absolute;
-  right: -200px;
-  top: 40px;
-  hr {
-    border: 1px solid $logoGreen;
-    margin: 15px 0;;
-  }
-  .search-header {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-  .search-popular {
-    li {
-      list-style: none;
-      font-weight: 600;
-    }
-    span{
-      color: $logoGreen;
-      font-weight: 800;
-    }
-  }
-  form {
-    @include dFlex(center);
-    input {
-      width: 100%;
-      margin-bottom: 0;
-      border-radius: 0;
-      font-family: $mainText;
-    }
-    input[type=text]:focus, textarea:focus {
-      box-shadow: (0 0 5px rgba(45, 225, 194, 1));
-      border: 1px solid rgba(45, 225, 194, 1);
-    }
-    label {
-      color: $logoGreen;
-      font-weight: 600;
-      font-size: 2.5rem;
-      height: 30px;
-    }
-  }
-  
-}
-
+// Import style for footer
 @import './footer';
