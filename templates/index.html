@@ -11,8 +11,69 @@
     </div>
   </div>
 </section>
-<main>
-  <section id="last-post"></section>
+<main id="home">
+  <section id="featured-post">
+    <h2>Featured Post</h2>
+    <div class="post-block">
+      <div class="mini-post-container">
+        <div class="row">
+          <div class="mini-post-img one-third column">
+            <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="" srcset="">
+          </div>
+          <div class="mini-post-content two-thirds column">
+            <div class="mini-post-header">
+              <h3>Blog Post Title</h3>
+            </div>
+            <div class="mini-post-text">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum amet atque deleniti neque voluptas sit? Alias reprehenderit provident, quod numquam quasi fuga voluptatum aliquam vitae a iusto facere quisquam! Sunt praesentium veritatis enim impedit laboriosam quia, eos officia tempore deserunt, aspernatur harum! Libero animi perferendis sequi tempora. </p>
+            </div>
+            <div class="mini-post-footer">
+              <p><span>#</span>softwaredevelopment, <span>#</span>flask, <span>#</span>javascript</p>
+              <p>29 Jun 2020 / 5 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section id="latest-post">
+    <h2>Latest Posts</h2>
+    <div class="latest-container">
+      <div class="row">
+        <div class="latest-one six columns">
+          <div class="latest-post-img">
+            <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="" srcset="">
+            <div class="latest-post-header">
+              <h3>Blog Post Title</h3>
+            </div>
+            <div class="latest-post-text">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum amet atque deleniti neque voluptas sit? Alias reprehenderit provident, quod numquam quasi fuga voluptatum aliquam vitae a iusto facere quisquam! Sunt praesentium veritatis enim impedit laboriosam quia, eos officia tempore deserunt, aspernatur harum! Libero animi perferendis sequi tempora. </p>
+            </div>
+            <div class="latest-post-footer">
+              <p><span>#</span>softwaredevelopment, <span>#</span>flask, <span>#</span>javascript</p>
+              <p>29 Jun 2020 / 5 min read</p>
+            </div>
+          </div>
+        </div>
+        <div class="latest-two six columns">
+          <div class="latest-post-img">
+            <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="" srcset="">
+            <div class="latest-post-header">
+              <h3>Blog Post Title</h3>
+            </div>
+            <div class="latest-post-text">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum amet atque deleniti neque voluptas sit? Alias reprehenderit provident, quod numquam quasi fuga voluptatum aliquam vitae a iusto facere quisquam! Sunt praesentium veritatis enim impedit laboriosam quia, eos officia tempore deserunt, aspernatur harum! Libero animi perferendis sequi tempora. </p>
+            </div>
+            <div class="latest-post-footer">
+              <p><span>#</span>softwaredevelopment, <span>#</span>flask, <span>#</span>javascript</p>
+              <p>29 Jun 2020 / 5 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 {% endblock %}
 {% block js %}

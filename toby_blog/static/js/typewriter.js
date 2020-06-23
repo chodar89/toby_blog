@@ -1,5 +1,5 @@
 const typeWriter = () => {
-  const tags = ['coding', 'python','javascript', 'django', 'flask', 'tech'];
+  const tags = ['coding', 'python', 'django', 'javascript', 'flask', 'tech'];
   let count = 0;
   let tagIndex = 0;
   let currentTag = '';
@@ -19,8 +19,7 @@ const typeWriter = () => {
       count++
       tagIndex = 0;
     }
-    setTimeout(type, 350);
-
+    setTimeout(type, 400);
   }());
 } 
 

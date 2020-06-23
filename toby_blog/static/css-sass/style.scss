@@ -57,6 +57,64 @@ body {
 // Import style for index/about hero
 @import './hero';
 
+// Index/Home page
+#home {
+  hr {
+    max-width: 1100px;
+    border-top: 1px solid $footerText;
+    margin-top: 60px;
+  }
+}
+
+#featured-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+}
+
+#latest-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+}
+
+.latest-container {
+  @include dFlex(center);
+  .row {
+    max-width: 1100px;
+  }
+}
+
+.latest-post-img {
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.latest-post-footer {
+  height: 50px;
+  p {
+    margin: 0;
+    span {
+      color: $logoGreen;
+      font-weight: 800;
+    }
+  }
+  p:first-child {
+    font-weight: 600;
+  }
+}
+
 // Import style for blog
 @import './blog';
 
