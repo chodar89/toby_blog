@@ -4,6 +4,9 @@ nav {
   width: 100vw;
   color: $headerColor;
   z-index: 10;
+  a {
+    text-decoration: none;
+  }
 }
 
 .nav-bg {
@@ -71,8 +74,25 @@ nav {
       color: $logoGreen;
       text-decoration: none;
       transition: color ease-in-out 0.2s;
+      position: relative;
       &:hover {
         color: $headerColor;
+      }
+      &:after {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        height: 1px;
+        transition: width ease 0.5s;
+      }
+      &:hover:after {
+        width: 100%;
+        border-top: 2px solid $logoGreen;
       }
     }
   }

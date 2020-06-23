@@ -37,6 +37,10 @@ nav {
   z-index: 10;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 .nav-bg {
   height: 60px;
   width: 100vw;
@@ -128,10 +132,30 @@ nav {
   text-decoration: none;
   -webkit-transition: color ease-in-out 0.2s;
   transition: color ease-in-out 0.2s;
+  position: relative;
 }
 
 .nav-links li a:hover {
   color: #2B2D42;
+}
+
+.nav-links li a:after {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  height: 1px;
+  -webkit-transition: width ease 0.5s;
+  transition: width ease 0.5s;
+}
+
+.nav-links li a:hover:after {
+  width: 100%;
+  border-top: 2px solid #2DE1C2;
 }
 
 .nav-links-dark li a {
