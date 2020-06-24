@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="hero">
+  <div class="hero-container">
+    <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="Hero Dev Blog Image">
+  </div>
+</section>
+ <main id="blog-post">
+  <section id="blog-post-header">
+    <div>
+      <h1>Blog Post Title</h1>
+      <hr>
+      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, et.</h2>
+    </div>
+    <div>
+      <div class="blog-post-tags">
+        <p><span>#</span>softwaredevelopment, <span>#</span>flask, <span>#</span>javascript</p>
+        <p>29 Jun 2020 / 5 min read</p>
+      </div>
+      <div class="blog-post-social-container">
+        <div class="blog-post-social">
+          <a href="#" target=""><i class="fab fa-linkedin"></i></a>
+          <a href="#" target=""><i class="fab fa-twitter-square"></i></a>
+          <a href="#" target=""><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </section>
+  <section id="blog-post-content">
+    <div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ex itaque neque blanditiis ipsa facilis aut dolores non dolorum. Ex voluptatibus facere vitae quo deleniti, soluta reprehenderit quibusdam, unde sit perspiciatis numquam ipsa debitis possimus aut quam sint aperiam inventore et id corporis nihil recusandae ad. Dolore pariatur perspiciatis rerum id sit quaerat hic iure sequi aperiam, dignissimos nemo consequuntur. Libero, accusamus modi sit beatae dolore, aliquid, nemo voluptates quo magni doloremque incidunt dolorem tenetur laborum! A consequatur reprehenderit aliquid quisquam necessitatibus facere id illum, laborum, fugiat sapiente harum, dolores alias debitis autem minus voluptate enim magni deleniti totam iure.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ex itaque neque blanditiis ipsa facilis aut dolores non dolorum. Ex voluptatibus facere vitae quo deleniti, soluta reprehenderit quibusdam, unde sit perspiciatis numquam ipsa debitis possimus aut quam sint aperiam inventore et id corporis nihil recusandae ad. Dolore pariatur perspiciatis rerum id sit quaerat hic iure sequi aperiam, dignissimos nemo consequuntur. Libero, accusamus modi sit beatae dolore, aliquid, nemo voluptates quo magni doloremque incidunt dolorem tenetur laborum! A consequatur reprehenderit aliquid quisquam necessitatibus facere id illum, laborum, fugiat sapiente harum, dolores alias debitis autem minus voluptate enim magni deleniti totam iure.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ex itaque neque blanditiis ipsa facilis aut dolores non dolorum. Ex voluptatibus facere vitae quo deleniti, soluta reprehenderit quibusdam, unde sit perspiciatis numquam ipsa debitis possimus aut quam sint aperiam inventore et id corporis nihil recusandae ad. Dolore pariatur perspiciatis rerum id sit quaerat hic iure sequi aperiam, dignissimos nemo consequuntur. Libero, accusamus modi sit beatae dolore, aliquid, nemo voluptates quo magni doloremque incidunt dolorem tenetur laborum! A consequatur reprehenderit aliquid quisquam necessitatibus facere id illum, laborum, fugiat sapiente harum, dolores alias debitis autem minus voluptate enim magni deleniti totam iure.</p>
+    </div>
+  </section>
+  <section id="blog-post-footer">
+    <p>
+      Source:
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, optio!
+    </p>
+  </section>
+</main>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/navanimation.js' %}"></script>
+{% endblock %}

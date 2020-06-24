@@ -9,3 +9,8 @@ class BlogView(TemplateView):
     template_name = 'blog/blog.html'
 
 
+class BlogPostView(TemplateView):
+    """
+    Blog post view
+    """
+    template_name = 'blog/blog_post.html'

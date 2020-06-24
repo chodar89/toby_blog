@@ -22,6 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  color: #040F0F;
 }
 
 nav {
@@ -502,6 +503,64 @@ nav a {
   height: 30px;
 }
 
+#blog-post {
+  max-width: 800px;
+  margin: auto;
+}
+
+#blog-post-header div h1 {
+  text-align: center;
+  font-weight: 400;
+  margin: 40px 0 30px;
+  letter-spacing: 2px;
+}
+
+#blog-post-header div h2 {
+  margin-bottom: 40px;
+}
+
+.blog-post-tags {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.blog-post-tags p {
+  margin: 0;
+}
+
+.blog-post-tags p span {
+  color: #2DE1C2;
+  font-weight: 800;
+}
+
+.blog-post-tags p:first-child {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.blog-post-social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.blog-post-social-container .blog-post-social {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -50px;
+}
+
+.blog-post-social-container .blog-post-social a {
+  color: #2DE1C2;
+  margin-right: 10px;
+}
+
 #about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,7 +590,7 @@ nav a {
 #about-me,
 #about-contact {
   text-align: center;
-  width: 1100px;
+  max-width: 1100px;
 }
 
 footer {

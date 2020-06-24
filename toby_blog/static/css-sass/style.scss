@@ -49,6 +49,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $mainText;;
+  color: $mainBlack;
 }
 
 // Import style for navigation bar
@@ -118,6 +119,61 @@ body {
 // Import style for blog
 @import './blog';
 
+// Blog Post style
+
+#blog-post {
+  max-width: 800px;
+  margin: auto;
+}
+
+#blog-post-header {
+  div {
+    h1 {
+      text-align: center;
+      font-weight: 400;
+      margin: 40px 0 30px;
+      letter-spacing: 2px;
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+  
+}
+
+.blog-post-tags {
+  height: 50px;
+  margin-bottom: 20px;
+  p {
+    margin: 0;
+    span {
+      color: $logoGreen;
+      font-weight: 800;
+    }
+  }
+  p:first-child {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.blog-post-social-container {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 30px;
+  .blog-post-social {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -50px;
+    a {
+      color: $logoGreen;
+      margin-right: 10px;
+    }
+  }
+}
+
 // About
 
 #about {
@@ -136,7 +192,7 @@ body {
 #about-me,
 #about-contact {
   text-align: center;
-  width: 1100px;
+  max-width: 1100px;
 }
 
 // Import style for footer
