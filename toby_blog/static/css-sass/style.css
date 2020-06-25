@@ -283,6 +283,85 @@ nav a {
   font-weight: 400;
 }
 
+#featured-post .featured-post-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+#featured-post .featured-post-container {
+  min-width: 1000px;
+  max-width: 1100px;
+  margin-top: 27px;
+}
+
+#featured-post .featured-post-img img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#featured-post .featured-post-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 250px;
+}
+
+#featured-post .featured-post-content .featured-post-header {
+  height: 40px;
+}
+
+#featured-post .featured-post-content .featured-post-header h3 {
+  margin: 0;
+}
+
+#featured-post .featured-post-content .featured-post-text {
+  height: 160px;
+}
+
+#featured-post .featured-post-content .featured-post-text p {
+  margin: 10px 0;
+}
+
+#featured-post .featured-post-content .featured-post-footer {
+  height: 50px;
+}
+
+#featured-post .featured-post-content .featured-post-footer p {
+  margin: 0;
+}
+
+#featured-post .featured-post-content .featured-post-footer p span {
+  color: #2DE1C2;
+  font-weight: 800;
+}
+
+#featured-post .featured-post-content .featured-post-footer p:first-child {
+  font-weight: 600;
+}
+
 #latest-post h2 {
   text-align: center;
   margin-top: 25px;
@@ -329,7 +408,7 @@ nav a {
 }
 
 #blog {
-  position: relative;
+  min-height: 80vh;
 }
 
 #last-post {
@@ -381,13 +460,12 @@ nav a {
 }
 
 .mini-post-container {
-  min-width: 800px;
-  max-width: 1100px;
+  width: 900px;
   margin-top: 27px;
 }
 
 .mini-post-img img {
-  width: 90%;
+  width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -450,7 +528,7 @@ nav a {
   height: 300px;
   width: 150px;
   position: absolute;
-  right: -200px;
+  right: -100px;
   top: 40px;
 }
 
@@ -559,6 +637,86 @@ nav a {
 .blog-post-social-container .blog-post-social a {
   color: #2DE1C2;
   margin-right: 10px;
+}
+
+#blog-post-content p {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+#blog-post-content .img-left-extend {
+  float: left;
+  max-width: 600px;
+  padding: 30px 30px 30px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: -80px;
+}
+
+#blog-post-content .img-right-extend {
+  float: right;
+  max-width: 600px;
+  padding: 30px 0 30px 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: -80px;
+}
+
+#blog-post-content .img-left {
+  float: left;
+  max-width: 600px;
+  padding: 30px 30px 30px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blog-post-content .img-right {
+  float: right;
+  max-width: 600px;
+  padding: 30px 0 30px 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blog-post-content .img-center {
+  width: 800px;
+  height: 400px;
+  padding: 30px 0 30px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blog-post-content .green {
+  color: #2DE1C2;
+}
+
+.clap-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 20%;
+  margin: 0 0 0 -120px;
+}
+
+.clap-container a {
+  text-decoration: none;
+  color: #040F0F;
+  font-size: 2.5rem;
+}
+
+.clap-container a:hover {
+  color: #2DE1C2;
 }
 
 #about {

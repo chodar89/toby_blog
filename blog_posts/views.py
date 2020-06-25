@@ -1,15 +1,22 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import View, DetailView
+
+from .models import Post
 
 
-class BlogView(TemplateView):
+class BlogView(View):
     """
     Blog posts view
     """
     template_name = 'blog/blog.html'
+    def get(self, request, *args, **kwargs):
+        posts = Post.objects.all()
+        return render(request, self.template_name, {'posts':posts})
+    def post(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
 
 
-class BlogPostView(TemplateView):
+class BlogPostView(DetailView):
     """
     Blog post view
     """
