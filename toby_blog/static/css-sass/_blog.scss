@@ -81,6 +81,35 @@
   }
 }
 
+.no-tags {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  text-align: center;
+  h3 {
+    color: $lightGreen;
+    font-weight: 700;
+  }
+  h5 {
+    font-weight: 400;
+  }
+  p {
+    max-width: 600px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $mainBlack;
+    &:hover {
+      color: $logoGreen;
+    }
+  }
+  span{
+    color: $logoGreen;
+    font-weight: 800;
+  }
+}
+
 #search-post {
   position: relative;
   max-width: 1100px;

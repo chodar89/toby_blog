@@ -588,6 +588,42 @@ nav a {
   font-weight: 600;
 }
 
+.no-tags {
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.no-tags h3 {
+  color: #c6ece6;
+  font-weight: 700;
+}
+
+.no-tags h5 {
+  font-weight: 400;
+}
+
+.no-tags p {
+  max-width: 600px;
+}
+
+.no-tags a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #040F0F;
+}
+
+.no-tags a:hover {
+  color: #2DE1C2;
+}
+
+.no-tags span {
+  color: #2DE1C2;
+  font-weight: 800;
+}
+
 #search-post {
   position: relative;
   max-width: 1100px;

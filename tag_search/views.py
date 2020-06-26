@@ -22,8 +22,9 @@ class SearchView(View):
         search_tag = self.request.POST.get("tag", None)
         tags = Tag.objects.all().order_by('views')[:5]
         if search_tag is not None:
-            print(search_tag)
             posts = Post.objects.filter(tags__tag=search_tag.lower())
+        else:
+            posts = []
         context = {
             'posts':posts,
             'tags': tags
