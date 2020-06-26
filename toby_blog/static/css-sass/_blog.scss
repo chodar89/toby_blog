@@ -1,7 +1,7 @@
 // BLOG PAGE STYLE AND SEARCH TAG PAGE
 
 #blog {
-  min-height: 80vh;;
+  min-height: calc(100vh - 300px - 60px);
 }
 
 #last-post {
@@ -102,6 +102,9 @@
     letter-spacing: 1px;
   }
   .search-popular {
+    >p {
+      margin: -5px 0 8px;
+    }
     li {
       list-style: none;
       font-weight: 600;
@@ -119,7 +122,10 @@
     }
   }
   form {
-    @include dFlex(center);
+    @include flexBetweenVertical();
+    > div {
+      @include dFlex(center);
+    }
     input {
       width: 100%;
       margin-bottom: 0;
@@ -135,6 +141,25 @@
       font-weight: 600;
       font-size: 2.5rem;
       height: 30px;
+    }
+    .tag-form-submit {
+      display: block;
+      line-height: inherit;
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+      margin-bottom: -10px;
+      text-align: center;
+      border: 2px solid $logoGreen;
+      border-radius: 0;
+      color: $mainBlack;
+      font-weight: 600;
+      font-size: 1.4rem;
+      transition: background-color ease-in-out 0.2s;
+      &:hover {
+        cursor: pointer;
+        background-color: $logoGreen;
+      }
     }
   }
 }

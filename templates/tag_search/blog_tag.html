@@ -9,10 +9,13 @@
       </div>
       <hr>
       <div class="search-input">
-        <form action="">
+        <form action="{% url 'tag_search' 'search' %}" method="post">
           {% csrf_token %}
-          <label for="tag"># &nbsp;</label>
-          <input type="text" id="tag" name="tag">
+          <div>
+            <label for="tag"># &nbsp;</label>
+            <input type="text" id="tag" name="tag" maxlength="15">
+          </div>
+          <button class="tag-form-submit" type="submit" role="button">search</button>
         </form>
       </div>
       <hr>
