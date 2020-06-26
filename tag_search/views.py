@@ -18,5 +18,6 @@ class SearchView(View):
             'tags': tags
         }
         return render(request, self.template_name, context)
+
     def post(self, request, *args, **kwargs):
         return render(request, self.template_name, context)

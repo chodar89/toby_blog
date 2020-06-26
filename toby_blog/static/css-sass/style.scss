@@ -126,6 +126,11 @@ body {
           color: $logoGreen;
           font-weight: 800;
         }
+        > a {
+          &:hover {
+            color: $logoGreen;
+          }
+        }
       }
       p:first-child {
         font-weight: 600;
@@ -152,7 +157,8 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 500px;
+      height: 520px;
+      margin-bottom: 60px;
       .latest-post-text-wrapper {
         height: 100%;
         display: flex;
@@ -183,8 +189,13 @@ body {
 
 .latest-post-footer {
   height: 50px;
-  p {
+  >p {
     margin: 0;
+    >a {
+      &:hover {
+        color: $logoGreen !important;
+      }
+    }
     span {
       color: $logoGreen;
       font-weight: 800;
@@ -199,116 +210,8 @@ body {
 @import './blog';
 
 // Blog Post style
+@import './post';
 
-#blog-post {
-  max-width: 800px;
-  margin: auto;
-}
-
-#blog-post-header {
-  div {
-    h1 {
-      text-align: center;
-      font-weight: 400;
-      margin: 40px 0 30px;
-      letter-spacing: 2px;
-    }
-    h2 {
-      margin-bottom: 40px;
-    }
-  }
-  
-}
-
-.blog-post-tags {
-  height: 50px;
-  margin-bottom: 20px;
-  p {
-    margin: 0;
-    span {
-      color: $logoGreen;
-      font-weight: 800;
-    }
-  }
-  p:first-child {
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-}
-
-.blog-post-social-container {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  margin-bottom: 30px;
-  .blog-post-social {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    position: absolute;
-    top: -50px;
-    a {
-      color: $logoGreen;
-      margin-right: 10px;
-    }
-  }
-}
-
-#blog-post-content {
-  p {
-    font-size: 1.6rem;
-    text-align: justify;
-  }
-  .img-left-extend {
-    float: left;
-    max-width: 600px;
-    padding: 30px 30px 30px 0;
-    object-fit: cover;
-    margin-left: -80px;
-  }
-  .img-right-extend {
-    float: right;
-    max-width: 600px;
-    padding: 30px 0 30px 30px;
-    object-fit: cover;
-    margin-right: -80px;
-  }
-  .img-left {
-    float: left;
-    max-width: 600px;
-    padding: 30px 30px 30px 0;
-    object-fit: cover;
-  }
-  .img-right {
-    float: right;
-    max-width: 600px;
-    padding: 30px 0 30px 30px;
-    object-fit: cover;
-  }
-  .img-center {
-    width: 800px;
-    height: 400px;
-    padding: 30px 0 30px 0;
-    object-fit: cover;
-  }
-  .green {
-    color: $logoGreen;
-  }
-}
-
-.clap-container {
-  @include flexCenterVertical();
-  position: fixed;
-  top: 20%;
-  margin: 0 0 0 -120px;
-  a {
-    text-decoration: none;
-    color: $mainBlack;
-    font-size: 2.5rem;
-    &:hover {
-      color: $logoGreen;
-    }
-  }
-}
 // About
 
 #about {

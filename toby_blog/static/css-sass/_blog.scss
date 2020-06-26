@@ -1,4 +1,4 @@
-// BLOG PAGE STYLE AND FEATURED POST ON INDEX PAGE
+// BLOG PAGE STYLE AND SEARCH TAG PAGE
 
 #blog {
   min-height: 80vh;;
@@ -65,6 +65,11 @@
     height: 50px;
     p {
       margin: 0;
+      >a {
+        &:hover {
+          color: $logoGreen !important;
+        }
+      }
       span {
         color: $logoGreen;
         font-weight: 800;
