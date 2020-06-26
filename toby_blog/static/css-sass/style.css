@@ -604,6 +604,15 @@ nav a {
   font-weight: 600;
 }
 
+#search-card .search-popular a {
+  text-decoration: none;
+  color: #040F0F;
+}
+
+#search-card .search-popular a:hover {
+  color: #2DE1C2;
+}
+
 #search-card .search-popular span {
   color: #2DE1C2;
   font-weight: 800;

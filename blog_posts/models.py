@@ -4,6 +4,7 @@ from django.db import models
 
 class Tag(models.Model):
     tag = models.CharField(max_length=20)
+    views = models.PositiveIntegerField(default=0)
 
     class Meta:
         ordering = ['tag']
@@ -19,6 +20,7 @@ class Post(models.Model):
     is_featured = models.BooleanField(default=False)
     is_posted = models.BooleanField(default=False)
     text = models.TextField()
+    source = models.TextField()
     tags = models.ManyToManyField(Tag)
     clap = models.PositiveIntegerField(default=0)
     views = models.PositiveIntegerField(default=0)

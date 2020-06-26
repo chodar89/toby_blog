@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, DetailView
 
-from .models import Post
+from .models import Post, Tag
 
 
 class BlogView(View):
@@ -11,7 +11,12 @@ class BlogView(View):
     template_name = 'blog/blog.html'
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all()
-        return render(request, self.template_name, {'posts':posts})
+        tags = Tag.objects.all().order_by('views')[:5]
+        context = {
+            'posts':posts,
+            'tags': tags
+        }
+        return render(request, self.template_name, context)
     def post(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
 
