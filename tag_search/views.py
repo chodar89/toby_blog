@@ -9,6 +9,9 @@ class SearchView(View):
     template_name = 'tag_search/blog_tag.html'
 
     def get(self, request, *args, **kwargs):
+        tag_name = self.kwargs.get("tag")
+        posts = Post.objects.filter(tags__tag=tag_name)
+        
         tags = Tag.objects.all().order_by('views')[:5]
         context = {
             'posts':posts,

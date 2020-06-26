@@ -1,17 +1,21 @@
 <nav>
   <div 
-    {% if '/blog/' != request.path  %}
-      class="nav-bg"   
-    {% else %}
+    {% if 'tag_search' in request.path %}
       class="nav-bg nav-bg-white"
+    {% elif '/blog/' == request.path %}
+      class="nav-bg nav-bg-white"
+    {% else %}
+      class="nav-bg"  
     {% endif %}
   >
   </div>
   <div 
-    {% if '/blog/' != request.path  %}
-      class="nav-line"
-    {% else %}
+    {% if 'tag_search' in request.path %}
       class="nav-line nav-line-active"
+    {% elif '/blog/' == request.path %}
+      class="nav-line nav-line-active"
+    {% else %}
+      class="nav-line"  
     {% endif %}
   >
   </div>
@@ -22,12 +26,13 @@
       <span>blog</span>
     </div>
   </a>
-  
-  <div 
-    {% if '/blog/' != request.path  %}
-      class="nav-links"
-    {% else %}
+  <div
+    {% if 'tag_search' in request.path %}
       class="nav-links nav-links-dark"
+    {% elif '/blog/' == request.path %}
+      class="nav-links nav-links-dark"
+    {% else %}
+      class="nav-links"  
     {% endif %}
   >
     <li 
