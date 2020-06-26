@@ -1,6 +1,6 @@
 # Readme and app in progress
 
-# ![alt text](toby_blog\static\img\mini_logo.png "Logo Title Text 1") TOBY DEV BLOG - My own personal blog.  
+# ![Toby Dev Logo](toby_blog/static/img/mini_logo.png) TOBY DEV BLOG - My own personal blog.  
 ## So the blog describes new tech and programming. I will post my little tutorials and coding struggles as well some interesting news and my adventure as a developer. I will also be able to follow my progress and create useful information that I can easily find in the future and blog users will also be able to use this information. I hope it comes in handy :)
 
 ## UX
