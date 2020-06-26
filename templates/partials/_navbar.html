@@ -1,6 +1,6 @@
 <nav>
   <div 
-    {% if '/' == request.path or '/about' == request.path or '/blog/post' == request.path %}
+    {% if '/blog/' != request.path  %}
       class="nav-bg"   
     {% else %}
       class="nav-bg nav-bg-white"
@@ -8,7 +8,7 @@
   >
   </div>
   <div 
-    {% if '/' == request.path or '/about' == request.path or '/blog/post' == request.path %}
+    {% if '/blog/' != request.path  %}
       class="nav-line"
     {% else %}
       class="nav-line nav-line-active"
@@ -24,7 +24,7 @@
   </a>
   
   <div 
-    {% if '/' == request.path or '/about' == request.path or '/blog/post' == request.path %}
+    {% if '/blog/' != request.path  %}
       class="nav-links"
     {% else %}
       class="nav-links nav-links-dark"

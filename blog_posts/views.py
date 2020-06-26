@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, DetailView
 
 from .models import Post
@@ -21,3 +21,8 @@ class BlogPostView(DetailView):
     Blog post view
     """
     template_name = 'blog/blog_post.html'
+    # queryset = Post.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Post, id=id_)

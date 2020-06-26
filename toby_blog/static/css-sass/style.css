@@ -459,6 +459,11 @@ nav a {
   margin-bottom: 25px;
 }
 
+.post-block a {
+  text-decoration: none;
+  color: #040F0F;
+}
+
 .mini-post-container {
   width: 900px;
   margin-top: 27px;
