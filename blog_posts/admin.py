@@ -9,7 +9,7 @@ class TagAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'is_posted', 'is_featured', 'clap', 'views', 'date')
+    list_display = ('title', 'is_posted', 'is_featured', 'claps', 'views', 'date')
     list_editable = ('is_posted', 'is_featured')
     list_per_page = 20
 

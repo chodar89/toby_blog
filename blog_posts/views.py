@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import View, DetailView
+from django.views.generic import View, DetailView, RedirectView
+from django.http import JsonResponse
 
 from .models import Post, Tag
 
@@ -37,3 +38,13 @@ class BlogPostView(DetailView):
             post.views += 1
             post.save()
         return post
+
+
+class PostClapView(RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        id_ = self.kwargs.get("id")
+        obj = get_object_or_404(Post, id=id_)
+        url_ = obj.get_absolute_url()
+        obj.claps += 1
+        obj.save()
+        return url_

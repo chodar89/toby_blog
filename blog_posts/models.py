@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -22,7 +23,7 @@ class Post(models.Model):
     text = models.TextField()
     source = models.TextField()
     tags = models.ManyToManyField(Tag)
-    clap = models.PositiveIntegerField(default=0)
+    claps = models.PositiveIntegerField(default=0)
     views = models.PositiveIntegerField(default=0)
     read_time = models.PositiveIntegerField(blank=False)
     img_main = models.ImageField(upload_to='imgs/post/%Y/%m/%d')
@@ -33,6 +34,12 @@ class Post(models.Model):
     img_5 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
     img_6 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
     date = models.DateTimeField(auto_now_add=True, blank=True)
+
+    def get_absolute_url(self):
+        return reverse('blog_post', kwargs={'id': self.id})
+
+    def get_clap_url(self):
+        return reverse('clap', kwargs={'id': self.id})
 
     def __str__(self):
         return self.title

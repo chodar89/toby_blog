@@ -46,8 +46,8 @@
   </section>
   <section id="blog-post-content">
     <div class="clap-container">
-      <a href="#"><i class="far fa-hand-paper"></i></a>
-      <span>234</span>
+      <a href="{{ object.get_clap_url }}"><i class="far fa-hand-paper"></i></a>
+      <span>{{ object.claps }}</span>
     </div>
     <div>
         {{ object.text|safe|linebreaks }}
