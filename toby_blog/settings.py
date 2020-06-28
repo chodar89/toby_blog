@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'blog_posts',
     'home_page',
     'static_pages',
-    'rest_framework'
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

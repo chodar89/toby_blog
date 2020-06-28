@@ -40,6 +40,9 @@ class Post(models.Model):
 
     def get_clap_url(self):
         return reverse('clap', kwargs={'id': self.id})
+    
+    def get_clap_api_url(self):
+        return reverse('clap_api', kwargs={'id': self.id})
 
     def __str__(self):
         return self.title

@@ -4,6 +4,9 @@ from django.http import JsonResponse
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import authentication, permissions
 
 from .models import Post, Tag
 
@@ -52,3 +55,23 @@ class PostClapView(RedirectView):
         obj.save()
         return url_
 
+
+class PostClapAPI(APIView):
+    """
+    View to list all users in the system.
+
+    * Requires token authentication.
+    * Only admin users are able to access this view.
+    """
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get(self, request, id=None, format=None):
+        obj = get_object_or_404(Post, id=id)
+        url_ = obj.get_absolute_url()
+        obj.claps += 1
+        obj.save()
+        data = {
+            'claps': obj.claps,
+        }
+        return Response(data)
