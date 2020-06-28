@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     'blog_posts',
     'home_page',
     'static_pages',
+    'rest_framework'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sass_processor',
 ]
 
 MIDDLEWARE = [

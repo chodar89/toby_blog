@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, DetailView, RedirectView
 from django.http import JsonResponse
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 from .models import Post, Tag
 
 
@@ -48,3 +51,4 @@ class PostClapView(RedirectView):
         obj.claps += 1
         obj.save()
         return url_
+
