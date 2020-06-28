@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Tag, Post
 
 class TagAdmin(admin.ModelAdmin):
-    list_display = ('id', 'tag')
+    list_display = ('id', 'tag', 'views')
     list_per_page = 20
     
 

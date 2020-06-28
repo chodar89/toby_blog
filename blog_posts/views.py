@@ -11,7 +11,7 @@ class BlogView(View):
     template_name = 'blog/blog.html'
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all()
-        tags = Tag.objects.all().order_by('views')[:5]
+        tags = Tag.objects.all().order_by('-views')[:5]
         context = {
             'posts':posts,
             'tags': tags
@@ -30,4 +30,11 @@ class BlogPostView(DetailView):
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(Post, id=id_)
+        post = get_object_or_404(Post, id=id_)
+        if post:
+            for tag in post.tags.all():
+                tag.views += 1
+                tag.save()
+            post.views += 1
+            post.save()
+        return post

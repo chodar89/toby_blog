@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
+from django.core.exceptions import ObjectDoesNotExist
 
 from blog_posts.models import Post, Tag
 
@@ -11,7 +12,7 @@ class SearchView(View):
     def get(self, request, *args, **kwargs):
         tag_name = self.kwargs.get("tag")
         posts = Post.objects.filter(tags__tag=tag_name)
-        tags = Tag.objects.all().order_by('views')[:5]
+        tags = Tag.objects.all().order_by('-views')[:5]
         context = {
             'posts':posts,
             'tags': tags
@@ -20,11 +21,18 @@ class SearchView(View):
 
     def post(self, request, *args, **kwargs):
         search_tag = self.request.POST.get("tag", None)
-        tags = Tag.objects.all().order_by('views')[:5]
+        search_tag = search_tag.lower()
         if search_tag is not None:
-            posts = Post.objects.filter(tags__tag=search_tag.lower())
+            try:
+                get_tag = Tag.objects.get(tag=search_tag)
+                get_tag.views += 1
+                get_tag.save()
+            except ObjectDoesNotExist:
+                pass
+            posts = Post.objects.filter(tags__tag=search_tag)
         else:
             posts = []
+        tags = Tag.objects.all().order_by('-views')[:5]
         context = {
             'posts':posts,
             'tags': tags
