@@ -16,6 +16,13 @@ class SearchView(View):
     def get(self, request, *args, **kwargs):
         tag_name = self.kwargs.get("tag")
         posts = Post.objects.filter(tags__tag=tag_name)
+        # Try to update tag view and filter posts with tag from search form
+        try:
+            get_tag = Tag.objects.get(tag=tag_name)
+            get_tag.views += 1
+            get_tag.save()
+        except ObjectDoesNotExist:
+            pass
         # Get 5 most popular tags
         tags = Tag.objects.all().order_by('-views')[:5]
         context = {

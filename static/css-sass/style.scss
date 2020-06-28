@@ -1,17 +1,38 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:wght@600;700;900&display=swap');
 
+// Import colors variables
+@import './_colors.scss';
+
 // Font Variables
-$lora: 'Lora', sans-serif;
-$montserrat: 'Montserrat', sans-serif;
-$logo-font: 'Nunito Sans', sans-serif;
+$header: 'Lora', sans-serif;
+$mainText: 'Montserrat', sans-serif;
+$logoFont: 'Nunito Sans', sans-serif;
 
 
 // Mixins
 
-@mixin flexCenter {
+@mixin dFlex($jContent) {
+  display: flex;
+  justify-content: $jContent;
+}
+
+@mixin flexCenterVertical {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexBetweenVertical {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -25,6 +46,192 @@ html {
 
 body {
   background-color: $backgroundWhite;
+  margin: 0;
+  padding: 0;
+  font-family: $mainText;;
+  color: $mainBlack;
 }
 
-@import './navbar'
+// Import style for navigation bar
+@import './_navbar.scss';
+
+// Import style for index/about hero
+@import './hero';
+
+// Index/Home page
+#home {
+  hr {
+    max-width: 1100px;
+    border-top: 1px solid $footerText;
+    margin-top: 60px;
+  }
+}
+
+#featured-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+  .featured-post-block {
+    @include flexCenterVertical();
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+  }
+  
+  .featured-post-container {
+    min-width: 1000px;
+    max-width: 1100px;
+    margin-top: 27px;
+    
+  }
+  
+  .featured-post-img {
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  
+  .featured-post-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 250px;
+    a {
+      text-decoration: none;
+      color: $mainBlack;
+    }
+    .featured-post-header {
+      height: 40px;
+      h3 {
+        margin: 0;
+      }
+    }
+    .featured-post-text {
+      height: 160px;
+      p {
+        margin: 10px 0;
+      }
+    }
+    .featured-post-footer {
+      height: 50px;
+      p {
+        margin: 0;
+        span {
+          color: $logoGreen;
+          font-weight: 800;
+        }
+        > a {
+          &:hover {
+            color: $logoGreen;
+          }
+        }
+      }
+      p:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+#latest-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+}
+
+.latest-container {
+  @include dFlex(center);
+  .row {
+    max-width: 1100px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 520px;
+      margin-bottom: 60px;
+      .latest-post-text-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & >div:last-child {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        a {
+          text-decoration: none;
+          color: $mainBlack;
+        }
+      }
+    }
+  }
+ }
+
+.latest-post-img {
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.latest-post-footer {
+  height: 50px;
+  >p {
+    margin: 0;
+    >a {
+      &:hover {
+        color: $logoGreen !important;
+      }
+    }
+    span {
+      color: $logoGreen;
+      font-weight: 800;
+    }
+  }
+  p:first-child {
+    font-weight: 600;
+  }
+}
+
+// Import style for blog
+@import './blog';
+
+// Blog Post style
+@import './post';
+
+// About
+
+#about {
+  @include flexCenterVertical();
+  hr {
+    border-top: solid 1px $headerColor;
+    width: 100%;
+    width: 1100px;
+  }
+}
+
+#about-me {
+  margin-top: 40px;
+}
+
+#about-me,
+#about-contact {
+  text-align: center;
+  max-width: 1100px;
+}
+
+// Import style for footer
+@import './footer';
