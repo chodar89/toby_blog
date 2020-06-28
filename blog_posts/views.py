@@ -6,7 +6,7 @@ from .models import Post, Tag
 
 class BlogView(View):
     """
-    Blog posts view
+    Blog posts view. Get all posts and render.
     """
     template_name = 'blog/blog.html'
     def get(self, request, *args, **kwargs):
@@ -23,10 +23,9 @@ class BlogView(View):
 
 class BlogPostView(DetailView):
     """
-    Blog post view
+    Blog post view, get post and update tag and post views or 404
     """
     template_name = 'blog/blog_post.html'
-    # queryset = Post.objects.all()
 
     def get_object(self):
         id_ = self.kwargs.get("id")

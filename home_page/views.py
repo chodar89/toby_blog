@@ -7,6 +7,9 @@ from blog_posts.models import Post
 
 
 class HomeView(View):
+    """
+    Home page view. Get one fatured post and two lates posts and render.
+    """
     template_name = 'index.html'
     def get(self, request, *args, **kwargs):
         featured_post = Post.objects.filter(is_featured=True).order_by('-date')[:1]
