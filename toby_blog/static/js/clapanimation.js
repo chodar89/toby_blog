@@ -19,4 +19,15 @@ const clapShow = () => {
   })
 }
 
+const clapJolly = () => {
+  const clap = document.querySelector(".clap-btn");
+  const count = document.querySelector(".clap-count")
+  clap.classList.remove("clap-jello");
+  count.classList.remove("count-add-one");
+  void clap.offsetWidth;
+  void count.offsetWidth;
+  clap.classList.add("clap-jello");
+  count.classList.add("count-add-one");
+}
+
 clapShow();

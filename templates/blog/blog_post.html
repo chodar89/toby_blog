@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
 <section id="hero">
   <div class="hero-container">
@@ -31,7 +32,7 @@
           {% endfor %}
         </p>
         <p>
-          {{ post.date|date:'d b Y'}} / {{ post.read_time }} min read
+          {{ post.date|date:'d F Y'}} / {{ post.read_time }} min read
         </p>
       </div>
       <div class="blog-post-social-container">
@@ -46,11 +47,14 @@
   </section>
   <section id="blog-post-content">
     <div class="clap-container">
-      <a class="clap-btn" data-href="{{ object.get_clap_api_url }}" href="{{ object.get_clap_url }}"><i class="far fa-hand-paper"></i></a>
-      <span class="clap-count">{{ object.claps }}</span>
+      <a class="clap-btn" data-href="{{ object.get_clap_api_url }}" href="{{ object.get_clap_url }}" onclick="clapJolly()"><i class="far fa-hand-paper"></i></a>
+      <span class="clap-count">{{ object.claps|intword }}</span>
     </div>
     <div>
-        {{ object.text|safe|linebreaks }}
+      {% autoescape off %}
+        {{ object.text }}
+      {% endautoescape %}
+        
     </div>
   </section>
   <hr>

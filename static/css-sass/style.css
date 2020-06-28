@@ -870,6 +870,8 @@ nav a {
   position: fixed;
   top: 20%;
   margin: 0 0 0 -120px;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
 }
 
 .clap-container a {

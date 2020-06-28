@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'home_page',
     'static_pages',
     'rest_framework',
+    'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

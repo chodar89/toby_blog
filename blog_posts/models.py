@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+import datetime
 
 # Create your models here.
 
@@ -33,7 +34,7 @@ class Post(models.Model):
     img_4 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
     img_5 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
     img_6 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    date = models.DateTimeField(auto_now_add=True, blank=True)
+    date = models.DateTimeField(auto_now_add=False, blank=True, default=datetime.datetime.now)
 
     def get_absolute_url(self):
         return reverse('blog_post', kwargs={'id': self.id})
