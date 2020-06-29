@@ -8,10 +8,12 @@ Toby Dev Blog app allows user to follow the newest posts. Filter post by tags, c
 
 
 ## Technologies
-- Django 3.0.7
 - Python 3.8.3
 - HTML
 - CSS / SASS
 - JavaScript
+- Django 3.0.7
+- Django REST framework
+- Summernote
 - PostgreSQL
 
