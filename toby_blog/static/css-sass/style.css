@@ -849,6 +849,12 @@ nav a {
 .blog-post-social-container .blog-post-social a {
   color: #2DE1C2;
   margin-right: 10px;
+  -webkit-transition: color ease 0.2s;
+  transition: color ease 0.2s;
+}
+
+.blog-post-social-container .blog-post-social a:hover {
+  color: #040F0F;
 }
 
 #blog-post-content p {
@@ -1131,6 +1137,27 @@ nav a {
   background-color: #2DE1C2;
 }
 
+#thankyou {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.thankyou-text {
+  text-align: center;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1153,7 +1180,7 @@ footer {
 
 footer hr {
   border-top: 1px solid #2B2D42;
-  width: 800px;
+  width: 900px;
   margin-top: 10px;
   margin-bottom: 10px;
 }

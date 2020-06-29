@@ -1,0 +1,10 @@
+// Style thank you page
+
+#thankyou {
+  @include flexCenterVertical();
+  margin-top: 100px;
+}
+
+.thankyou-text {
+  text-align: center;
+}

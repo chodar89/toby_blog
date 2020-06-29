@@ -1,6 +1,6 @@
 <nav>
   <div 
-    {% if 'tag_search' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
       class="nav-bg nav-bg-white"
     {% elif '/blog/' == request.path %}
       class="nav-bg nav-bg-white"
@@ -10,7 +10,7 @@
   >
   </div>
   <div 
-    {% if 'tag_search' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
       class="nav-line nav-line-active"
     {% elif '/blog/' == request.path %}
       class="nav-line nav-line-active"
@@ -27,7 +27,7 @@
     </div>
   </a>
   <div
-    {% if 'tag_search' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
       class="nav-links nav-links-dark"
     {% elif '/blog/' == request.path %}
       class="nav-links nav-links-dark"
