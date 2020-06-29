@@ -28,12 +28,6 @@ class Post(models.Model):
     views = models.PositiveIntegerField(default=0)
     read_time = models.PositiveIntegerField(blank=False)
     img_main = models.ImageField(upload_to='imgs/post/%Y/%m/%d')
-    img_1 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    img_2 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    img_3 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    img_4 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    img_5 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
-    img_6 = models.ImageField(upload_to='imgs/post/%Y/%m/%d', blank=True)
     date = models.DateTimeField(auto_now_add=False, blank=True, default=datetime.datetime.now)
 
     def get_absolute_url(self):

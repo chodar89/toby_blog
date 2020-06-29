@@ -807,7 +807,7 @@ nav a {
   text-align: justify;
 }
 
-#blog-post-content .img-left-extend {
+#blog-post-content .img-l-e {
   float: left;
   max-width: 600px;
   padding: 30px 30px 30px 0;
@@ -816,7 +816,7 @@ nav a {
   margin-left: -80px;
 }
 
-#blog-post-content .img-right-extend {
+#blog-post-content .img-r-e {
   float: right;
   max-width: 600px;
   padding: 30px 0 30px 30px;
@@ -825,7 +825,7 @@ nav a {
   margin-right: -80px;
 }
 
-#blog-post-content .img-left {
+#blog-post-content .img-l {
   float: left;
   max-width: 600px;
   padding: 30px 30px 30px 0;
@@ -833,7 +833,7 @@ nav a {
      object-fit: cover;
 }
 
-#blog-post-content .img-right {
+#blog-post-content .img-r {
   float: right;
   max-width: 600px;
   padding: 30px 0 30px 30px;
@@ -841,7 +841,7 @@ nav a {
      object-fit: cover;
 }
 
-#blog-post-content .img-center {
+#blog-post-content .img-c {
   width: 800px;
   height: 400px;
   padding: 30px 0 30px 0;
