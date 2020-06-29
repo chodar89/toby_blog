@@ -18,6 +18,16 @@
   max-width: 1100px;
 }
 
+#hidden-anchor {
+  position: relative;
+  visibility: hidden; 
+  pointer-events: none;
+  #contact-anchor {
+    position: absolute;
+    top: -30px;
+  }
+}
+
 .contact-form {
   form {
     @include flexBetweenVertical();

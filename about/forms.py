@@ -12,3 +12,6 @@ class ContactForm(forms.ModelForm):
             'subject',
             'message'
         ]
+        labels  = {
+        'fname': 'First Name',
+        }

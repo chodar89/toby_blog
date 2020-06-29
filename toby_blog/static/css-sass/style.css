@@ -1070,6 +1070,17 @@ nav a {
   max-width: 1100px;
 }
 
+#hidden-anchor {
+  position: relative;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#hidden-anchor #contact-anchor {
+  position: absolute;
+  top: -30px;
+}
+
 .contact-form form {
   display: -webkit-box;
   display: -ms-flexbox;
