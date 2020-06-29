@@ -745,8 +745,8 @@ nav a {
 .pagination .left {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-180%) translateY(-10%);
-          transform: translateX(-180%) translateY(-10%);
+  -webkit-transform: translateX(-180%) translateY(-21%);
+          transform: translateX(-180%) translateY(-21%);
 }
 
 .pagination .left a {
@@ -756,8 +756,8 @@ nav a {
 .pagination .right {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(80%) translateY(-10%);
-          transform: translateX(80%) translateY(-10%);
+  -webkit-transform: translateX(80%) translateY(-21%);
+          transform: translateX(80%) translateY(-21%);
 }
 
 .pagination .right a {
@@ -775,7 +775,7 @@ nav a {
 .pagination a {
   text-decoration: none;
   color: #2DE1C2;
-  font-size: 2rem;
+  font-size: 2.5rem;
   -webkit-transition: color ease 0.2s;
   transition: color ease 0.2s;
 }
@@ -1082,7 +1082,7 @@ nav a {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  height: 500px;
+  height: 600px;
 }
 
 .contact-form form input[type=text]:focus, .contact-form form textarea:focus {
@@ -1094,22 +1094,18 @@ nav a {
 .contact-form form input {
   font-family: "Montserrat", sans-serif;
   border-radius: 0;
+  width: 100%;
 }
 
 .contact-form form textarea {
   font-family: "Montserrat", sans-serif;
   resize: none;
   border-radius: 0;
+  width: 100%;
+  height: 180px;
 }
 
-.contact-form form button {
-  display: block;
-  line-height: inherit;
-  width: 100%;
-  height: 30px;
-  margin-top: 10px;
-  margin-bottom: -10px;
-  text-align: center;
+.contact-form form .contact-submit {
   border: 1px solid #2DE1C2;
   border-radius: 0;
   color: #040F0F;
@@ -1119,7 +1115,7 @@ nav a {
   transition: background-color ease-in-out 0.2s;
 }
 
-.contact-form form button:hover {
+.contact-form form .contact-submit:hover {
   cursor: pointer;
   background-color: #2DE1C2;
 }

@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'blog_posts',
     'home_page',
     'about',
-    'static_pages',
     'rest_framework',
     'django_summernote',
     'django.contrib.humanize',

@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-import datetime
+from django.utils import timezone
 
 # Create your models here.
 
@@ -28,7 +28,7 @@ class Post(models.Model):
     views = models.PositiveIntegerField(default=0)
     read_time = models.PositiveIntegerField(blank=False)
     img_main = models.ImageField(upload_to='imgs/post/%Y/%m/%d')
-    date = models.DateTimeField(auto_now_add=False, blank=True, default=datetime.datetime.now)
+    date = models.DateTimeField(default=timezone.now)
 
     def get_absolute_url(self):
         return reverse('blog_post', kwargs={'id': self.id})

@@ -201,7 +201,7 @@
   .left {
     position: absolute;
     left: 50%;
-    transform: translateX(-180%) translateY(-10%);
+    transform: translateX(-180%) translateY(-21%);
     a {
       margin-left: 15px;
     }
@@ -209,7 +209,7 @@
   .right {
     position: absolute;
     left: 50%;
-    transform: translateX(80%) translateY(-10%);
+    transform: translateX(80%) translateY(-21%);
     a {
       margin-left: 15px;
     }
@@ -223,7 +223,7 @@
   a {
     text-decoration: none;
     color: $logoGreen;
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: color ease 0.2s;
     &:hover {
       color: $mainBlack;
