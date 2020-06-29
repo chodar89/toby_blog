@@ -735,6 +735,55 @@ nav a {
   background-color: #2DE1C2;
 }
 
+.pagination {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.pagination .left {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-180%) translateY(-10%);
+          transform: translateX(-180%) translateY(-10%);
+}
+
+.pagination .left a {
+  margin-left: 15px;
+}
+
+.pagination .right {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(80%) translateY(-10%);
+          transform: translateX(80%) translateY(-10%);
+}
+
+.pagination .right a {
+  margin-left: 15px;
+}
+
+.pagination .current {
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 600;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #2DE1C2;
+  font-size: 2rem;
+  -webkit-transition: color ease 0.2s;
+  transition: color ease 0.2s;
+}
+
+.pagination a:hover {
+  color: #040F0F;
+}
+
 #blog-post {
   max-width: 800px;
   margin: auto;

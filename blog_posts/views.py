@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, DetailView, RedirectView
 from django.http import JsonResponse
+from django.core.paginator import Paginator
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -19,13 +20,15 @@ class BlogView(View):
     def get(self, request, *args, **kwargs):
         posts = Post.objects.all().order_by('-date')
         tags = Tag.objects.all().order_by('-views')[:5]
+        # Set number of posts to dipslay on one page
+        paginator = Paginator(posts, 5)
+        page_number = request.GET.get('page')
+        page_posts = paginator.get_page(page_number)
         context = {
-            'posts':posts,
+            'page_posts':page_posts,
             'tags': tags
         }
         return render(request, self.template_name, context)
-    def post(self, request, *args, **kwargs):
-        return render(request, self.template_name, {})
 
 
 class BlogPostView(DetailView):

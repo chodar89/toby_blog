@@ -192,3 +192,41 @@
     }
   }
 }
+
+.pagination{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  .left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-180%) translateY(-10%);
+    a {
+      margin-left: 15px;
+    }
+  }
+  .right {
+    position: absolute;
+    left: 50%;
+    transform: translateX(80%) translateY(-10%);
+    a {
+      margin-left: 15px;
+    }
+  }
+  .current {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+    color: $logoGreen;
+    font-size: 2rem;
+    transition: color ease 0.2s;
+    &:hover {
+      color: $mainBlack;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.paginator import Paginator
 
 from blog_posts.models import Post, Tag
 
@@ -27,8 +28,12 @@ class SearchView(View):
         tags = Tag.objects.all().order_by('-views')[:5]
         # Get all tags
         all_tags = Tag.objects.all().order_by('tag')
+        # Set number of posts to dipslay on one page
+        paginator = Paginator(posts, 5)
+        page_number = request.GET.get('page')
+        page_posts = paginator.get_page(page_number)
         context = {
-            'posts':posts,
+            'page_posts':page_posts,
             'tags': tags,
             'all_tags': all_tags
         }
@@ -55,8 +60,12 @@ class SearchView(View):
         tags = Tag.objects.all().order_by('-views')[:5]
         # Get all tags
         all_tags = Tag.objects.all().order_by('tag')
+        # Set number of posts to dipslay on one page
+        paginator = Paginator(posts, 5)
+        page_number = request.GET.get('page')
+        page_posts = paginator.get_page(page_number)
         context = {
-            'posts':posts,
+            'page_posts':page_posts,
             'tags': tags,
             'all_tags': all_tags
         }
