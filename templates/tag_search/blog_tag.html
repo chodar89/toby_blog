@@ -87,7 +87,7 @@
         <h3># couldn't find this tag</h3>
         <h5>available tags:</h5>
         <p>
-          {% for tag in tags %}
+          {% for tag in all_tags %}
           <a href="{% url 'tag_search' tag.tag %}">
             <span>#</span>{{ tag.tag }},
           </a>  

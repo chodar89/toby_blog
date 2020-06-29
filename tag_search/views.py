@@ -15,7 +15,7 @@ class SearchView(View):
 
     def get(self, request, *args, **kwargs):
         tag_name = self.kwargs.get("tag")
-        posts = Post.objects.filter(tags__tag=tag_name)
+        posts = Post.objects.filter(tags__tag=tag_name).order_by('-date')
         # Try to update tag view and filter posts with tag from search form
         try:
             get_tag = Tag.objects.get(tag=tag_name)
@@ -25,9 +25,12 @@ class SearchView(View):
             pass
         # Get 5 most popular tags
         tags = Tag.objects.all().order_by('-views')[:5]
+        # Get all tags
+        all_tags = Tag.objects.all().order_by('tag')
         context = {
             'posts':posts,
-            'tags': tags
+            'tags': tags,
+            'all_tags': all_tags
         }
         return render(request, self.template_name, context)
 
@@ -45,13 +48,16 @@ class SearchView(View):
                 get_tag.save()
             except ObjectDoesNotExist:
                 pass
-            posts = Post.objects.filter(tags__tag=search_tag)
+            posts = Post.objects.filter(tags__tag=search_tag).order_by('-date')
         else:
             posts = []
-         # Get 5 most popular tags
+        # Get 5 most popular tags
         tags = Tag.objects.all().order_by('-views')[:5]
+        # Get all tags
+        all_tags = Tag.objects.all().order_by('tag')
         context = {
             'posts':posts,
-            'tags': tags
+            'tags': tags,
+            'all_tags': all_tags
         }
         return render(request, self.template_name, context)

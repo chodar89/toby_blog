@@ -17,7 +17,7 @@ class BlogView(View):
     """
     template_name = 'blog/blog.html'
     def get(self, request, *args, **kwargs):
-        posts = Post.objects.all()
+        posts = Post.objects.all().order_by('-date')
         tags = Tag.objects.all().order_by('-views')[:5]
         context = {
             'posts':posts,
