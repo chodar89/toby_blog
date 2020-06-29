@@ -3,6 +3,10 @@
 #thankyou {
   @include flexCenterVertical();
   margin-top: 100px;
+  section {
+    max-width: 900px;
+    padding: 0 30px;
+  }
 }
 
 .thankyou-text {
