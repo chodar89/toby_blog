@@ -17,18 +17,19 @@
   <hr>
   <section id="about-contact">
     <h2>Contact</h2> 
-    <p>If you have any questions and tips regarding this blog, then please let me know what I can improve. If you have any rocket ideas that I can implement, then please fill the form too and hit (☞ ͡° ͜ʖ ͡°)☞ the SEND button :) Thank you!</p>
+    <p>If you have questions and tips regarding this blog, then please let me know what I can improve. Also, maybe you have some work and I look like the right person for you. <span style="white-space: nowrap">If that was YES!</span> fill the form and 
+    <span style="white-space: nowrap">hit (☞ ͡° ͜ʖ ͡°)☞ the SEND</span> button :) Thank you!</p>
     <div class="contact-form">
       <form action="" method="POST">
         {% csrf_token %}
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="fname">E-mail</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required>
         <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Subject..">
+        <input type="text" id="subject" name="subject" placeholder="Subject.." required>
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message.." style="height:170px" maxlength="1500"></textarea>
+        <textarea id="message" name="message" placeholder="Message.." style="height:170px" maxlength="1500" required></textarea>
         <button type="submit">SEND</button>
       </form>
     </div>

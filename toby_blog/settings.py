@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 INSTALLED_APPS = [
     'blog_posts',
     'home_page',
+    'about',
     'static_pages',
     'rest_framework',
     'django_summernote',
