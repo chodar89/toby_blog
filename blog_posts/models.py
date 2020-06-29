@@ -21,7 +21,7 @@ class Post(models.Model):
     description = models.CharField(max_length=350, blank=False)
     is_featured = models.BooleanField(default=False)
     is_posted = models.BooleanField(default=False)
-    text = models.TextField()
+    content = models.TextField()
     source = models.TextField()
     tags = models.ManyToManyField(Tag)
     claps = models.PositiveIntegerField(default=0)

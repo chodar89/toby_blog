@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'home_page',
     'static_pages',
     'rest_framework',
+    'django_summernote',
     'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,6 +129,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+# SUMMERNOTE
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # STATIC FILES
 
 # Static files (CSS, JavaScript, Images)
@@ -139,5 +143,5 @@ STATICFILES_DIRS = [
 ]
 
 # Media Folder Settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

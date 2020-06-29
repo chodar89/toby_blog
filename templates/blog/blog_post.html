@@ -51,10 +51,7 @@
       <span class="clap-count">{{ object.claps|intword }}</span>
     </div>
     <div>
-      {% autoescape off %}
-        {{ object.text }}
-      {% endautoescape %}
-        
+      {{ object.content|safe }}  
     </div>
   </section>
   <hr>
