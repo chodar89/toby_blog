@@ -1092,13 +1092,24 @@ footer {
 
 footer hr {
   border-top: 1px solid #2B2D42;
-  width: 1100px;
+  width: 800px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .footer-social {
   margin-top: 10px;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #2B2D42;
+  -webkit-transition: opacity ease 0.15s;
+  transition: opacity ease 0.15s;
+}
+
+.footer-social a:hover {
+  opacity: 0.8;
 }
 
 .footer-social i {
@@ -1119,6 +1130,10 @@ footer hr {
 .footer-map li a {
   text-decoration: none;
   color: #2B2D42;
+}
+
+.footer-map li a:hover {
+  text-decoration: underline;
 }
 
 .footer-copyright {
@@ -1151,7 +1166,8 @@ footer hr {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 2px;
-  margin: 10px 0 0 10px;
+  margin: 0 0 0 10px;
+  text-decoration: none;
 }
 
 .footer-logo span:nth-child(2) {
