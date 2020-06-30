@@ -2,6 +2,7 @@
 #home {
   hr {
     max-width: 1100px;
+    padding: 0 30px;
     border-top: 1px solid $footerText;
     margin-top: 60px;
   }
@@ -23,8 +24,8 @@
   }
   
   .featured-post-container {
-    min-width: 1000px;
-    max-width: 1100px;
+    max-width: 1160px;
+    padding: 0 30px;
     margin-top: 27px;
     
   }
@@ -92,7 +93,8 @@
 .latest-container {
   @include dFlex(center);
   .row {
-    max-width: 1100px;
+    max-width: 1160px;
+    padding: 0 30px;
     > div {
       display: flex;
       flex-direction: column;
