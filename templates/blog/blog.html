@@ -13,15 +13,17 @@
           </a>
         </div>
         <div class="mini-post-content">
-          <div class="mini-post-header">
-            <a href="{% url 'blog_post' post.id %}">
-              <h3>{{post.title}}</h3>
-            </a>
-          </div>
-          <div class="mini-post-text">
-            <a href="{% url 'blog_post' post.id %}">
-              <p>{{ post.description }}</p>
-            </a>
+          <div class="mini-post-text-wrapper">
+            <div class="mini-post-header">
+              <a href="{% url 'blog_post' post.id %}">
+                <h3>{{post.title}}</h3>
+              </a>
+            </div>
+            <div class="mini-post-text">
+              <a href="{% url 'blog_post' post.id %}">
+                <p>{{ post.description }}</p>
+              </a>
+            </div>
           </div>
           <div class="mini-post-footer">
             <p>
