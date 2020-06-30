@@ -2,36 +2,7 @@
 {% load static %}
 {% block content %}
 <main id="blog">
-  <aside id="search-post">
-    <div id="search-card">
-      <div class="search-header">
-        Tag Search
-      </div>
-      <hr>
-      <div class="search-input">
-        <form action="{% url 'tag_search' 'search' %}" method="post">
-          {% csrf_token %}
-          <div>
-            <label for="tag"># &nbsp;</label>
-            <input type="text" id="tag" name="tag" maxlength="15" required>
-          </div>
-          <button class="tag-form-submit" type="submit" role="button">search</button>
-        </form>
-      </div>
-      <hr>
-      <div class="search-popular"> 
-        <p>popular tags:</p>
-        {% for tag in tags %}
-        <li>
-          <a href="{% url 'tag_search' tag.tag %}">
-            <span>#</span>{{ tag.tag }}
-          </a>
-        </li>
-        {% endfor %}
-      </div>
-      <hr>
-    </div>
-  </aside>
+  {% include 'partials/_search.html' %}
   <section id="mini-posts">
     {% if page_posts %}
       {% for post in page_posts %}

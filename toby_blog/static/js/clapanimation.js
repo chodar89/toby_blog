@@ -4,7 +4,7 @@ const clapShow = () => {
     let top = window.scrollY;
     let windowHeight = window.innerHeight;
     let documentHeight = document.body.scrollHeight;
-    let clapShowHeight = (windowHeight * 0.45);
+    let clapShowHeight = (windowHeight * 0.4);
     let clapHideHeight;
     if (windowHeight < 500) {
       clapHideHeight = documentHeight - 450;

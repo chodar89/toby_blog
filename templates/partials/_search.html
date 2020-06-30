@@ -1,0 +1,36 @@
+<aside id="search-post">
+  <div id="search-card">
+    <div class="search-tag">
+      <div class="search-header">
+        Tag Search
+      </div>
+      <hr>
+      <div class="search-input">
+        <form action="{% url 'tag_search' 'search' %}" method="post">
+          {% csrf_token %}
+          <div>
+            <label for="tag"># &nbsp;</label>
+            <input type="text" id="tag" name="tag" maxlength="15">
+          </div>
+          <button class="tag-form-submit" type="submit" role="button">search</button>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="search-popular">
+      <div>
+        <p>popular tags:</p>
+      </div>
+      <div>
+        {% for tag in tags %}
+        <li>
+          <a href="{% url 'tag_search' tag.tag %}">
+            <span>#</span>{{ tag.tag }}
+          </a>
+        </li>
+        {% endfor %}
+      </div>
+    </div>
+    <hr>
+  </div>
+</aside>
