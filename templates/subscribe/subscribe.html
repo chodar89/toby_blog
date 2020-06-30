@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main id="subscribe">
+  <section class="subscribe-container">
+    <div class="subscribe-text">
+      <h3>Subscribe</h3>
+      <p>Subscribe this blog to receive the latest news and information about new posts.</p>
+    </div>
+    <div class="subscribe-form">
+      <form method="post"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <input type="submit" value="SUBSCRIBE" class="contact-submit"> 
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}

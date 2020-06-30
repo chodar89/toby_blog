@@ -11,7 +11,7 @@ class AboutViewForm(CreateView):
     """
     About page
     """
-    template_name = 'about.html'
+    template_name = 'about/about.html'
     form_class = ContactForm
 
     def form_valid(self, form):

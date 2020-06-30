@@ -1,7 +1,7 @@
 // BLOG PAGE STYLE AND SEARCH TAG PAGE
 
 #blog {
-  min-height: calc(100vh - 300px - 60px);
+  @include minHeight();
 }
 
 #last-post {

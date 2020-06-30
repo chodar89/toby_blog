@@ -5,15 +5,6 @@
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-facebook-f"></i></a>
   </div>
-  <div class="footer-subscribe">
-    <div>
-      <form action="">
-        {% csrf_token %}
-        <label for="subemail">Subscribe:</label>
-        <input type="email" name="subemail" id="subemail" placeholder="Email">
-      </form>
-    </div>
-  </div>
   <hr>
   <div class="footer-map">
     <a href="{% url 'index' %}">
@@ -26,6 +17,7 @@
     <li><a href="{% url 'index' %}">Home</a></li>
     <li><a href="{% url 'blog' %}">Blog</a></li>
     <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'subscribe' %}">Subscribe</a></li>
     <!-- <li><a href="#">Inspirations</a></li> -->
   </div>
   <hr>

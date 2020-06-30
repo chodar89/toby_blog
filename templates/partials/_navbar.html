@@ -1,6 +1,6 @@
 <nav>
   <div 
-    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path or 'thankyousub' in request.path or 'subscribe' in request.path %}
       class="nav-bg nav-bg-white"
     {% elif '/blog/' == request.path %}
       class="nav-bg nav-bg-white"
@@ -10,7 +10,7 @@
   >
   </div>
   <div 
-    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path or 'thankyousub' in request.path or 'subscribe' in request.path %}
       class="nav-line nav-line-active"
     {% elif '/blog/' == request.path %}
       class="nav-line nav-line-active"
@@ -27,7 +27,7 @@
     </div>
   </a>
   <div
-    {% if 'tag_search' in request.path or 'thankyou' in request.path %}
+    {% if 'tag_search' in request.path or 'thankyou' in request.path or 'thankyousub' in request.path or 'subscribe' in request.path %}
       class="nav-links nav-links-dark"
     {% elif '/blog/' == request.path %}
       class="nav-links nav-links-dark"
@@ -36,20 +36,33 @@
     {% endif %}
   >
     <li 
-    {% if '/' == request.path %}
-    class="nav-link-active"
-    {% endif %}
-    ><a href="{% url 'index' %}">Home</a></li>
+      {% if '/' == request.path %}
+        class="nav-link-active"
+      {% endif %}
+    >
+      <a href="{% url 'index' %}">Home</a>
+    </li>
     <li
-    {% if '/blog/' == request.path %}
-    class="nav-link-active"
-    {% endif %}
-    ><a href="{% url 'blog' %}">Blog</a></li>
+      {% if '/blog/' == request.path %}
+        class="nav-link-active"
+      {% endif %}
+    >
+      <a href="{% url 'blog' %}">Blog</a>
+    </li>
     <li
-    {% if '/about' == request.path %}
-    class="nav-link-active"
-    {% endif %}
-    ><a href="{% url 'about' %}">About</a></li>
+      {% if '/about/' == request.path %}
+        class="nav-link-active"
+      {% endif %}
+    >
+      <a href="{% url 'about' %}">About</a>
+    </li>
+    <li
+      {% if '/subscribe/' == request.path %}
+        class="nav-link-active"
+      {% endif %}
+    >
+      <a href="{% url 'subscribe' %}">Subscribe</a>
+    </li>
     <!-- <li><a href="#">Inspirations</a></li> -->
   </div>
   <div class="nav-social">

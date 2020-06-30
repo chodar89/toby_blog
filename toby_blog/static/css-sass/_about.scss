@@ -1,6 +1,7 @@
 // Style about page with contact
 #about {
   @include flexCenterVertical();
+  @include minHeightWithHero();
   hr {
     border-top: solid 1px $headerColor;
     width: 100%;

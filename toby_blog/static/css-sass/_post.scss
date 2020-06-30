@@ -1,6 +1,7 @@
 // Blog post style
 
 #blog-post {
+  @include minHeightWithHero();
   width: 860px;
   padding: 0 30px;
   margin: auto;

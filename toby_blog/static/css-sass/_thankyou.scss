@@ -2,6 +2,7 @@
 
 #thankyou {
   @include flexCenterVertical();
+  @include minHeight();
   margin-top: 100px;
   section {
     max-width: 960px;
