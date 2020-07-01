@@ -22,7 +22,7 @@
 
 #hidden-anchor {
   position: relative;
-  visibility: hidden; 
+  visibility: hidden;
   pointer-events: none;
   #contact-anchor {
     position: absolute;
@@ -35,7 +35,9 @@
     @include flexBetweenVertical();
     font-family: $mainText;
     height: 600px;
-    input[type=text]:focus, textarea:focus, input[type=email]:focus {
+    input[type="text"]:focus,
+    textarea:focus,
+    input[type="email"]:focus {
       box-shadow: (0 0 5px rgba(45, 225, 194, 1));
       border: 1px solid rgba(45, 225, 194, 1);
     }

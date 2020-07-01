@@ -69,7 +69,7 @@
     height: 50px;
     p {
       margin: 0;
-      >a {
+      > a {
         &:hover {
           color: $logoGreen !important;
         }
@@ -111,7 +111,7 @@
       color: $logoGreen;
     }
   }
-  span{
+  span {
     color: $logoGreen;
     font-weight: 800;
   }
@@ -132,14 +132,14 @@
   top: 40px;
   hr {
     border-top: 2px solid $logoGreen;
-    margin: 15px 0;;
+    margin: 15px 0;
   }
   .search-header {
     font-size: 2rem;
     letter-spacing: 1px;
   }
   .search-popular {
-    >p {
+    > p {
       margin: -5px 0 8px;
     }
     li {
@@ -153,7 +153,7 @@
         color: $logoGreen;
       }
     }
-    span{
+    span {
       color: $logoGreen;
       font-weight: 800;
     }
@@ -169,7 +169,8 @@
       border-radius: 0;
       font-family: $mainText;
     }
-    input[type=text]:focus, textarea:focus {
+    input[type="text"]:focus,
+    textarea:focus {
       box-shadow: (0 0 5px rgba(45, 225, 194, 1));
       border: 1px solid rgba(45, 225, 194, 1);
     }
@@ -201,7 +202,7 @@
   }
 }
 
-.pagination{
+.pagination {
   padding: 35px 0;
   position: relative;
   width: 100%;
@@ -322,9 +323,10 @@
     margin-top: 27px;
     font-size: 1.3rem;
     h3 {
-      font-size: 3rem
+      font-size: 3rem;
     }
-    .mini-post-content, .mini-post-img img {
+    .mini-post-content,
+    .mini-post-img img {
       height: 230px;
     }
     .mini-post-text {
@@ -352,6 +354,9 @@
   #search-card .search-tag form button {
     width: 50%;
   }
+  .mini-post-content .mini-post-text p {
+    margin-top: 15px;
+  }
   .search-tag {
     height: 52px;
   }
@@ -363,11 +368,13 @@
       height: 10px;
       h3 {
         margin-top: -6px;
+        margin-bottom: 4px;
         font-size: 2rem;
         font-weight: 600;
       }
     }
-    .mini-post-content, .mini-post-img img {
+    .mini-post-content,
+    .mini-post-img img {
       height: 165px;
     }
     .mini-post-text {
@@ -452,5 +459,4 @@
       }
     }
   }
-  
 }

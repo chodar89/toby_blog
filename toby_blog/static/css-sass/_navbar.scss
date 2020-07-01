@@ -85,7 +85,7 @@ nav {
         right: 0;
         margin: auto;
         width: 0%;
-        content: '.';
+        content: ".";
         color: transparent;
         height: 1px;
         transition: width ease 0.5s;
@@ -113,7 +113,6 @@ nav {
   border-top: 2px solid $logoGreen;
   margin-top: -2px;
 }
-
 
 .nav-social {
   font-size: 2.5rem;
@@ -145,7 +144,27 @@ nav {
   transition: all 0.8s;
 }
 
-@media only screen and (max-width:800px) {
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes navSocialFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
   }
@@ -156,7 +175,7 @@ nav {
     letter-spacing: 2px;
     span:nth-child(2) {
       letter-spacing: 8px;
-      margin-left:6px;
+      margin-left: 6px;
     }
   }
   .nav-bg {
@@ -203,22 +222,24 @@ nav {
   }
 }
 
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
+@media only screen and (max-width: 550px) {
+  .nav-logo {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    span:nth-child(2) {
+      letter-spacing: 7px;
+      margin-left: 5px;
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
+  .nav-bg {
+    height: 40px;
   }
-}
-
-@keyframes navSocialFade {
-  from {
-    opacity: 0;
+  .nav-line {
+    top: 40px;
   }
-  to {
-    opacity: 1;
+  .burger {
+    margin: 6px 15px;
   }
 }
