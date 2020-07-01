@@ -129,3 +129,20 @@ nav {
     }
   }
 }
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $logoGreen;
+  margin: 5px;
+  transition: all 0.8s;
+}
+
+@media only screen and (max-width:800px) {
+
+}

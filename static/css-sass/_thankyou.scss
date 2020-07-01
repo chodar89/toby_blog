@@ -1,0 +1,20 @@
+// Style thank you page
+
+#thankyou {
+  @include flexCenterVertical();
+  @include minHeight();
+  margin-top: 100px;
+  section {
+    max-width: 960px;
+    padding: 0 30px;
+  }
+}
+
+.thankyou-text {
+  text-align: center;
+}
+
+.thankyou-gif {
+  margin: auto;
+  max-width: 450px;
+}

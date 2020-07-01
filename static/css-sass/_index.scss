@@ -1,0 +1,150 @@
+// Index/Home page
+#home {
+  @include minHeightWithHero();
+  hr {
+    max-width: 1100px;
+    padding: 0 30px;
+    border-top: 1px solid $footerText;
+    margin-top: 60px;
+  }
+}
+
+#featured-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+  .featured-post-block {
+    @include flexCenterVertical();
+    height: 250px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+  }
+  
+  .featured-post-container {
+    max-width: 1160px;
+    padding: 0 30px;
+    margin-top: 27px;
+    
+  }
+  
+  .featured-post-img {
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  
+  .featured-post-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 250px;
+    a {
+      text-decoration: none;
+      color: $mainBlack;
+    }
+    .featured-post-header {
+      height: 40px;
+      h3 {
+        margin: 0;
+      }
+    }
+    .featured-post-text {
+      height: 160px;
+      p {
+        margin: 10px 0;
+      }
+    }
+    .featured-post-footer {
+      height: 50px;
+      p {
+        margin: 0;
+        span {
+          color: $logoGreen;
+          font-weight: 800;
+        }
+        > a {
+          &:hover {
+            color: $logoGreen;
+          }
+        }
+      }
+      p:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+#latest-post {
+  h2 {
+    text-align: center;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+}
+
+.latest-container {
+  @include dFlex(center);
+  .row {
+    max-width: 1160px;
+    padding: 0 30px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 520px;
+      margin-bottom: 60px;
+      .latest-post-text-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & >div:last-child {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        a {
+          text-decoration: none;
+          color: $mainBlack;
+        }
+      }
+    }
+  }
+ }
+
+.latest-post-img {
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+.latest-post-footer {
+  height: 50px;
+  >p {
+    margin: 0;
+    >a {
+      &:hover {
+        color: $logoGreen !important;
+      }
+    }
+    span {
+      color: $logoGreen;
+      font-weight: 800;
+    }
+  }
+  p:first-child {
+    font-weight: 600;
+  }
+}

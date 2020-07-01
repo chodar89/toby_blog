@@ -1,0 +1,47 @@
+// Subscribe page style
+#subscribe {
+  @include minHeight();
+  @include dFlex(center);
+  padding: 100px 30px 0;
+  margin: auto;
+  width: 500px;
+  .subscribe-container {
+    @include flexCenterVertical();
+    .subscribe-text {
+      text-align: center;
+    }
+  }
+  .subscribe-form {
+    width: 100%;
+    form {
+      @include flexCenterVertical();
+      input {
+        width: 100%;
+        border-radius: 0;
+        font-family: $mainText;
+      }
+      p {
+        width: 100%;
+        label {
+          text-align: center;
+        }
+        input[type=email]:focus {
+          box-shadow: (0 0 5px rgba(45, 225, 194, 1));
+          border: 1px solid rgba(45, 225, 194, 1);
+        }
+      }
+      .subscribe-submit {
+        border: 1px solid $logoGreen;
+        border-radius: 0;
+        color: $mainBlack;
+        font-weight: 600;
+        font-size: 1.4rem;
+        transition: background-color ease-in-out 0.2s;
+        &:hover {
+          cursor: pointer;
+          background-color: $logoGreen;
+        }
+      }
+    }
+  }
+}
