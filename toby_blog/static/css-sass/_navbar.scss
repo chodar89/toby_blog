@@ -134,7 +134,7 @@ nav {
   display: none;
   cursor: pointer;
   height: 34px;
-  padding: 15px;
+  margin: 10px 15px;
 }
 
 .burger div {
@@ -148,6 +148,22 @@ nav {
 @media only screen and (max-width:800px) {
   body {
     overflow-x: hidden;
+  }
+  .nav-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    span:nth-child(2) {
+      letter-spacing: 8px;
+      margin-left:6px;
+    }
+  }
+  .nav-bg {
+    height: 50px;
+  }
+  .nav-line {
+    top: 50px;
   }
   .burger {
     display: initial;

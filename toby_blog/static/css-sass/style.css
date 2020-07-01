@@ -194,7 +194,7 @@ nav a {
   display: none;
   cursor: pointer;
   height: 34px;
-  padding: 15px;
+  margin: 10px 15px;
 }
 
 .burger div {
@@ -209,6 +209,22 @@ nav a {
 @media only screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
+  }
+  .nav-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  .nav-logo span:nth-child(2) {
+    letter-spacing: 8px;
+    margin-left: 6px;
+  }
+  .nav-bg {
+    height: 50px;
+  }
+  .nav-line {
+    top: 50px;
   }
   .burger {
     display: initial;
@@ -391,6 +407,19 @@ nav a {
   margin-top: 60px;
 }
 
+#featured-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #featured-post h2 {
   text-align: center;
   margin-top: 25px;
@@ -414,14 +443,27 @@ nav a {
       -ms-flex-align: center;
           align-items: center;
   height: 250px;
-  margin-top: 60px;
+  max-width: 1160px;
+  padding: 0 40px;
+  margin-top: 35px;
   margin-bottom: 25px;
 }
 
 #featured-post .featured-post-container {
-  max-width: 1160px;
-  padding: 0 30px;
-  margin-top: 27px;
+  width: 100%;
+  padding: 0 0 45px;
+  margin: 27px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #040F0F;
+}
+
+#featured-post .featured-post-img {
+  width: 32%;
 }
 
 #featured-post .featured-post-img img {
@@ -432,6 +474,7 @@ nav a {
 }
 
 #featured-post .featured-post-content {
+  width: 64%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,7 +502,9 @@ nav a {
 }
 
 #featured-post .featured-post-content .featured-post-text {
-  height: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 150px;
 }
 
 #featured-post .featured-post-content .featured-post-text p {
@@ -487,6 +532,23 @@ nav a {
   font-weight: 600;
 }
 
+#featured-post .featured-post-content .featured-post-footer p:last-child {
+  white-space: nowrap;
+}
+
+#latest-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #latest-post h2 {
   text-align: center;
   margin-top: 25px;
@@ -502,14 +564,13 @@ nav a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.latest-container .row {
   max-width: 1160px;
   padding: 0 30px;
+  margin-top: 25px;
 }
 
-.latest-container .row > div {
+.latest-container .latest {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,10 +582,10 @@ nav a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 520px;
-  margin-bottom: 60px;
+  margin: 0 10px 60px;
 }
 
-.latest-container .row > div .latest-post-text-wrapper {
+.latest-container .latest .latest-post-text-wrapper {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,7 +599,7 @@ nav a {
           justify-content: space-between;
 }
 
-.latest-container .row > div .latest-post-text-wrapper > div:last-child {
+.latest-container .latest .latest-post-text-wrapper > div:last-child {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -552,7 +613,7 @@ nav a {
           justify-content: space-between;
 }
 
-.latest-container .row > div .latest-post-text-wrapper a {
+.latest-container .latest .latest-post-text-wrapper a {
   text-decoration: none;
   color: #040F0F;
 }
@@ -583,6 +644,175 @@ nav a {
 
 .latest-post-footer p:first-child {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1100px) {
+  #latest-post {
+    margin-bottom: 60px;
+  }
+  .latest-container .latest .latest-post-text-wrapper h3 {
+    font-size: 3rem;
+  }
+  .latest-container .latest .latest-post-text-wrapper p {
+    font-size: 1.3rem;
+  }
+  #featured-post .featured-post-content .featured-post-text p {
+    font-size: 1.3rem;
+  }
+  #featured-post .featured-post-content .featured-post-footer p {
+    font-size: 1.3rem;
+  }
+  #featured-post .featured-post-content .featured-post-header h3 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #featured-post .featured-post-img img {
+    height: 80%;
+  }
+  .featured-post-content {
+    position: relative;
+  }
+  .featured-post-content .featured-post-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    padding: 20px 0 0 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .featured-post-content .featured-post-footer p:last-child {
+    font-weight: 500;
+  }
+  .featured-post-content .featured-post-footer p:first-child {
+    margin-right: 40px !important;
+    font-weight: 600 !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #featured-post h2 {
+    font-size: 3.5rem;
+  }
+  #latest-post h2 {
+    font-size: 3.5rem;
+  }
+  .latest-container .latest .latest-post-text-wrapper h3 {
+    font-size: 2.8rem;
+  }
+  .latest-container .latest-post-img img {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .latest-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latest-container .latest {
+    width: 100%;
+    height: 425px;
+    margin: 0 10px 30px;
+  }
+  .latest-container > div:last-child {
+    padding-top: 32px;
+    border-top: 1px solid #dadada;
+  }
+  #featured-post .featured-post-content .featured-post-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #home #featured-post .featured-post-block {
+    height: 500px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #home #featured-post .featured-post-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #home #featured-post .featured-post-container {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #home #featured-post .featured-post-container .featured-post-img {
+    width: 100%;
+  }
+  #home #featured-post .featured-post-container .featured-post-img img {
+    height: 180px;
+  }
+  #home #featured-post .featured-post-container .featured-post-content {
+    width: 100%;
+  }
+  #home #featured-post .featured-post-container .featured-post-header {
+    height: 45px;
+  }
+  #home #featured-post .featured-post-container .featured-post-text {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #featured-post .featured-post-block {
+    padding: 0 15px;
+  }
+  .featured-post-content .featured-post-footer {
+    padding: 20px 0 0 30px;
+  }
+  #featured-post .featured-post-content .featured-post-text p {
+    max-height: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  #featured-post .featured-post-content .featured-post-header h3 {
+    max-height: 39px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .latest-container .latest {
+    margin: 0 0 30px;
+  }
+  .latest-container {
+    padding: 0 15px;
+  }
+  .latest-container .latest {
+    height: 465px;
+  }
+  .latest-container .latest .latest-post-text-wrapper p {
+    max-height: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  .latest-container .latest .latest-post-text-wrapper h3 {
+    max-height: 36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 #blog {

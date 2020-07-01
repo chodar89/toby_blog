@@ -10,6 +10,9 @@
 }
 
 #featured-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h2 {
     text-align: center;
     margin-top: 25px;
@@ -20,18 +23,23 @@
   .featured-post-block {
     @include flexCenterVertical();
     height: 250px;
-    margin-top: 60px;
+    max-width: 1160px;
+    padding: 0 40px;
+    margin-top: 35px;
     margin-bottom: 25px;
   }
   
   .featured-post-container {
-    max-width: 1160px;
-    padding: 0 30px;
-    margin-top: 27px;
-    
+    width: 100%;
+    padding: 0 0 45px;
+    margin: 27px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $mainBlack;
   }
   
   .featured-post-img {
+    width: 32%;
     img {
       width: 100%;
       height: 250px;
@@ -40,6 +48,7 @@
   }
   
   .featured-post-content {
+    width: 64%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -55,7 +64,9 @@
       }
     }
     .featured-post-text {
-      height: 160px;
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      height: 150px;
       p {
         margin: 10px 0;
       }
@@ -77,11 +88,17 @@
       p:first-child {
         font-weight: 600;
       }
+      p:last-child {
+        white-space: nowrap;
+      }
     }
   }
 }
 
 #latest-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h2 {
     text-align: center;
     margin-top: 25px;
@@ -93,30 +110,30 @@
 
 .latest-container {
   @include dFlex(center);
-  .row {
-    max-width: 1160px;
-    padding: 0 30px;
-    > div {
+  max-width: 1160px;
+  padding: 0 30px;
+  margin-top: 25px;
+  .latest {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 520px;
+    margin: 0 10px 60px;
+    .latest-post-text-wrapper {
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 520px;
-      margin-bottom: 60px;
-      .latest-post-text-wrapper {
+      & >div:last-child {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        & >div:last-child {
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-        a {
-          text-decoration: none;
-          color: $mainBlack;
-        }
+      }
+      a {
+        text-decoration: none;
+        color: $mainBlack;
       }
     }
   }
@@ -146,5 +163,182 @@
   }
   p:first-child {
     font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #latest-post {
+    margin-bottom: 60px;
+  }
+  .latest-container .latest .latest-post-text-wrapper {
+    h3 {
+      font-size: 3rem
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+  #featured-post .featured-post-content {
+    .featured-post-text {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    .featured-post-footer {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    .featured-post-header {
+      h3 {
+        font-size: 3rem
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  
+  #featured-post .featured-post-img {
+    img {
+      height: 80%;
+    }
+  }
+  .featured-post-content {
+    position: relative;
+    .featured-post-footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      padding: 20px 0 0 80px;
+      display: flex;
+      justify-content: space-between;
+      p:last-child {
+        font-weight: 500;
+      }
+      p:first-child {
+        margin-right: 40px !important;
+        font-weight: 600 !important;
+      }
+    }
+  }
+} 
+
+@media only screen and (max-width: 700px) {
+  #featured-post {
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+  #latest-post {
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+  .latest-container .latest .latest-post-text-wrapper {
+    h3 {
+      font-size: 2.8rem
+    }
+  }
+  .latest-container .latest-post-img {
+    img {
+      height: 180px;
+    }
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .latest-container {
+    flex-direction: column;
+  }
+  .latest-container .latest {
+    width: 100%;
+    height: 425px;
+    margin: 0 10px 30px;
+  }
+  .latest-container {
+    >div:last-child {
+      padding-top: 32px;
+      border-top: 1px solid #dadada;
+    }
+  }
+  #featured-post .featured-post-content .featured-post-footer {
+    flex-direction: column;
+  }
+  #home {
+    #featured-post {
+      .featured-post-block {
+        height: 500px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .featured-post-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .featured-post-container {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        .featured-post-img {
+          width: 100%;
+          img {
+            height: 180px;
+          }
+        }
+        .featured-post-content {
+          width: 100%;
+        }
+        .featured-post-header {
+          height: 45px;
+        }
+        .featured-post-text {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #featured-post .featured-post-block {
+    padding: 0 15px;
+  }
+  .featured-post-content .featured-post-footer {
+    padding: 20px 0 0 30px;
+  }
+  #featured-post .featured-post-content .featured-post-text p {
+    max-height: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  #featured-post .featured-post-content .featured-post-header h3 {
+    max-height: 39px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .latest-container .latest {
+    margin: 0 0 30px;
+  }
+  .latest-container {
+    padding: 0 15px;
+  }
+  .latest-container .latest {
+    height: 465px;
+  }
+  .latest-container .latest .latest-post-text-wrapper p {
+    max-height: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  .latest-container .latest .latest-post-text-wrapper h3 {
+    max-height: 36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }

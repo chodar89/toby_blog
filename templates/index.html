@@ -17,13 +17,13 @@
     {% for post in featured_post %}
     <div class="featured-post-block">
       <div class="featured-post-container">
-        <div class="row">
-          <div class="featured-post-img one-third column">
-            <a href="{% url 'blog_post' post.id %}">
-              <img src="{{ post.img_main.url }}" alt="" srcset="">
-            </a>
-          </div>
-          <div class="featured-post-content two-thirds column">
+        <div class="featured-post-img">
+          <a href="{% url 'blog_post' post.id %}">
+            <img src="{{ post.img_main.url }}" alt="" srcset="">
+          </a>
+        </div>
+        <div class="featured-post-content">
+          <div class="featured-post-text-wrapper">
             <div class="featured-post-header">
               <a href="{% url 'blog_post' post.id %}">
                 <h3>
@@ -38,39 +38,37 @@
                 </p>
               </a>
             </div>
-            <div class="featured-post-footer">
-              <p>
-                {% for tag in post.tags.all %}
-                  {% if post.tags.all|length > 0 %}
-                    {% if forloop.last %}
-                    <a href="{% url 'tag_search' tag %}">
-                      <span>#</span>{{ tag }}
-                    </a>
-                    {% else %}
-                    <a href="{% url 'tag_search' tag %}">
-                      <span>#</span>{{ tag }},&nbsp;
-                    </a>
-                    {% endif %}
+          </div>
+          <div class="featured-post-footer">
+            <p>
+              {% for tag in post.tags.all %}
+                {% if post.tags.all|length > 0 %}
+                  {% if forloop.last %}
+                  <a href="{% url 'tag_search' tag %}">
+                    <span>#</span>{{ tag }}
+                  </a>
+                  {% else %}
+                  <a href="{% url 'tag_search' tag %}">
+                    <span>#</span>{{ tag }},&nbsp;
+                  </a>
                   {% endif %}
-                {% endfor %}
-              </p>
-              <p>
-                {{ post.date|date:'d F Y'}} / {{ post.read_time }} min read
-              </p>
-            </div>
+                {% endif %}
+              {% endfor %}
+            </p>
+            <p>
+              {{ post.date|date:'d F Y'}} / {{ post.read_time }} min read
+            </p>
           </div>
         </div>
       </div>
     </div>
     {% endfor %}
   </section>
-  <hr>
   <section id="latest-post">
     <h2>Latest Posts</h2>
     <div class="latest-container">
-      <div class="row">
         {% for post in latest_posts %}
-          <div class="six columns">
+          <div class="latest">
             <div class="latest-post-img">
               <a href="{% url 'blog_post' post.id %}">
                 <img src="{{ post.img_main.url }}" alt="Mini Blog Post img">
