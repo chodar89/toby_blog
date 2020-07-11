@@ -32,9 +32,6 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog_post', kwargs={'id': self.id})
-
-    def get_clap_url(self):
-        return reverse('clap', kwargs={'id': self.id})
     
     def get_clap_api_url(self):
         return reverse('clap_api', kwargs={'id': self.id})

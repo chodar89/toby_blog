@@ -47,16 +47,6 @@ class BlogPostView(DetailView):
         return post
 
 
-class PostClapView(RedirectView):
-    def get_redirect_url(self, *args, **kwargs):
-        id_ = self.kwargs.get("id")
-        obj = get_object_or_404(Post, id=id_)
-        url_ = obj.get_absolute_url()
-        obj.claps += 1
-        obj.save()
-        return url_
-
-
 class PostClapAPI(APIView):
     """
     View to list all users in the system.
