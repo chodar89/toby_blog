@@ -110,20 +110,22 @@
 .clap-container {
   @include flexCenterVertical();
   position: fixed;
-  top: 20%;
-  margin: 0 0 0 -120px;
+  top: 25%;
+  left: calc(50% - 535px);
   opacity: 0;
   transition: opacity ease-in-out 0.2s;
   a {
     text-decoration: none;
     color: $mainBlack;
     font-size: 2.5rem;
+    cursor: pointer;
     &:hover {
       color: $logoGreen;
     }
   }
   .clap-count {
     font-weight: 600;
+    font-size: 1.8rem;
   }
 }
 
@@ -207,4 +209,31 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+}
+
+
+@media only screen and (max-width: 1120px ){
+  .clap-container {
+    opacity: 1;
+    position: initial;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    span {
+      margin-left: 10px;
+    }
+  }
+  .blog-post-social-container {
+    justify-content: flex-start;
+ }
+  .blog-post-social-container .blog-post-social {
+    display: initial;
+    position: initial;
+    top: auto;
+    padding-top: 12px;
+  }
+}
+@media only screen and (max-width: 870px ){
+  
 }

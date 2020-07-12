@@ -4,7 +4,7 @@
   @include dFlex(center);
   padding: 100px 30px 0;
   margin: auto;
-  width: 500px;
+  max-width: 500px;
   .subscribe-container {
     @include flexCenterVertical();
     .subscribe-text {

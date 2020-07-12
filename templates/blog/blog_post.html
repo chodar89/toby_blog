@@ -41,15 +41,15 @@
           <a href="#" target=""><i class="fab fa-twitter-square"></i></a>
           <a href="#" target=""><i class="fab fa-facebook-square"></i></a>
         </div>
+        <div class="clap-container">
+          <a class="clap-btn" data-href="{{ object.get_clap_api_url }}" onclick="clapJolly()"><i class="far fa-hand-paper"></i></a>
+          <span class="clap-count">{{ object.claps|intword }}</span>
+        </div>
       </div>
       <hr>
     </div>
   </section>
   <section id="blog-post-content">
-    <div class="clap-container">
-      <a class="clap-btn" data-href="{{ object.get_clap_api_url }}" onclick="clapJolly()"><i class="far fa-hand-paper"></i></a>
-      <span class="clap-count">{{ object.claps|intword }}</span>
-    </div>
     <div>
       {{ object.content|safe }}  
     </div>

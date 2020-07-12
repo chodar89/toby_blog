@@ -1598,8 +1598,8 @@ nav a {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  top: 20%;
-  margin: 0 0 0 -120px;
+  top: 25%;
+  left: calc(50% - 535px);
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
@@ -1609,6 +1609,7 @@ nav a {
   text-decoration: none;
   color: #040f0f;
   font-size: 2.5rem;
+  cursor: pointer;
 }
 
 .clap-container a:hover {
@@ -1617,6 +1618,7 @@ nav a {
 
 .clap-container .clap-count {
   font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .clap-jello {
@@ -1716,6 +1718,36 @@ nav a {
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .clap-container {
+    opacity: 1;
+    position: initial;
+    padding-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 20px;
+  }
+  .clap-container span {
+    margin-left: 10px;
+  }
+  .blog-post-social-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .blog-post-social-container .blog-post-social {
+    display: initial;
+    position: initial;
+    top: auto;
+    padding-top: 12px;
   }
 }
 
@@ -1826,7 +1858,7 @@ nav a {
           justify-content: center;
   padding: 100px 30px 0;
   margin: auto;
-  width: 500px;
+  max-width: 500px;
 }
 
 #subscribe .subscribe-container {
