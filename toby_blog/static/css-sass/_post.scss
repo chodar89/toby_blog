@@ -2,8 +2,8 @@
 
 #blog-post {
   @include minHeightWithHero();
-  width: 860px;
-  padding: 0 30px;
+  max-width: 940px;
+  padding: 0 100px;
   margin: auto;
 }
 
@@ -235,5 +235,38 @@
   }
 }
 @media only screen and (max-width: 870px ){
-  
+  #blog-post-content .img-l-e,
+  #blog-post-content .img-r-e {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 780px ){
+  #blog-post {
+    width: 100%;
+    padding: 0 50px;
+  }
+  #blog-post-content .img-r-e {
+    margin-right: 0px;
+  }
+  #blog-post-content .img-l-e {
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 710px ){
+  #blog-post-content .img-l-e,
+  #blog-post-content .img-r-e {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 610px ){
+  #blog-post-content .img-l-e,
+  #blog-post-content .img-r-e {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #blog-post {
+    padding: 0 20px;
+  }
 }
