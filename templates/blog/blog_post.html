@@ -37,9 +37,9 @@
       </div>
       <div class="blog-post-social-container">
         <div class="blog-post-social">
-          <a href="#" target=""><i class="fab fa-linkedin"></i></a>
-          <a href="#" target=""><i class="fab fa-twitter-square"></i></a>
-          <a href="#" target=""><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.tobydevblog.com/blog/post/{{object.id}}/&title=&summary={{ object.title }}&source=" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/home?status=www.tobydevblog.com/blog/post/{{object.id}}/ {{ object.title }}" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.tobydevblog.com/blog/post/{{object.id}}/"><i class="fab fa-facebook-f"></i></a>
         </div>
         <div class="clap-container">
           <a class="clap-btn" data-href="{{ object.get_clap_api_url }}" onclick="clapJolly()"><i class="far fa-hand-paper"></i></a>
