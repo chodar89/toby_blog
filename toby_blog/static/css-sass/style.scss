@@ -60,6 +60,14 @@ body {
   color: $mainBlack;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 // Import style for navigation bar
 @import './_navbar.scss';
 

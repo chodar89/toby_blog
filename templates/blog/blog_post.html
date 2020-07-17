@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+{% block metatag %}
+<meta name="description" content="Software Developer Blog - {{ object.title }}">
+{% endblock %}
 {% block content %}
 <section id="hero">
   <div class="hero-container">
-    <img src="{% static 'img/blog/blog_post_1.jpg' %}" alt="Hero Dev Post Blog Image">
+    <img src="{{ object.img_main.url }}" alt="Hero Dev Post Blog Image">
   </div>
 </section>
  <main id="blog-post">
