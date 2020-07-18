@@ -16,7 +16,7 @@ class BlogView(View):
     """
     template_name = 'blog/blog.html'
     def get(self, request, *args, **kwargs):
-        posts = Post.objects.all().order_by('-date')
+        posts = Post.objects.filter(is_posted=True).order_by('-date')
         tags = Tag.objects.all().order_by('-views')[:5]
         # Set number of posts to dipslay on one page
         paginator = Paginator(posts, 5)
