@@ -30,6 +30,14 @@
   }
 }
 
+#hero > .about-hero-img::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+} 
+
+#hero > .about-hero-img > img {
+  object-position: 100% 28%;
+} 
+
 .contact-form {
   form {
     @include flexBetweenVertical();

@@ -289,6 +289,10 @@ nav a {
     right: 0px;
     bottom: 5px;
     opacity: 0;
+    display: none;
+  }
+  .nav-social-active {
+    display: initial;
   }
   .nav-links li {
     opacity: 0;
@@ -1847,6 +1851,16 @@ nav a {
 #hidden-anchor #contact-anchor {
   position: absolute;
   top: -30px;
+}
+
+#hero > .about-hero-img::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+#hero > .about-hero-img > img {
+  -o-object-position: 100% 28%;
+     object-position: 100% 28%;
 }
 
 .contact-form form {

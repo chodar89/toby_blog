@@ -16,10 +16,12 @@ const navSlide = () => {
         link.style.animation = '';
         nav.style.transition = '';
         navSocial.style.animation = '';
+        navSocial.classList.remove('nav-social-active')
       } else {
         nav.style.transition = 'transform 0.5s ease-in';
         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
         navSocial.style.animation = `navSocialFade 1.3s ease forwards ${countIndex / 7 +0.3}s`;
+        navSocial.classList.add('nav-social-active')
       }
     })
   });
