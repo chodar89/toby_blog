@@ -36,8 +36,8 @@ class BlogPostView(DetailView):
     template_name = 'blog/blog_post.html'
 
     def get_object(self):
-        id_ = self.kwargs.get("id")
-        post = get_object_or_404(Post, id=id_)
+        slug_ = self.kwargs.get("slug")
+        post = get_object_or_404(Post, slug=slug_)
         if post:
             for tag in post.tags.all():
                 tag.views += 1

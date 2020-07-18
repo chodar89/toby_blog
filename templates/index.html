@@ -21,21 +21,21 @@
     <div class="featured-post-block">
       <div class="featured-post-container">
         <div class="featured-post-img">
-          <a href="{% url 'blog_post' post.id %}">
+          <a href="{% url 'blog_post' post.slug %}">
             <img src="{{ post.img_main.url }}" alt="" srcset="">
           </a>
         </div>
         <div class="featured-post-content">
           <div class="featured-post-text-wrapper">
             <div class="featured-post-header">
-              <a href="{% url 'blog_post' post.id %}">
+              <a href="{% url 'blog_post' post.slug %}">
                 <h3>
                   {{ post.title }}
                 </h3>
               </a>
             </div>
             <div class="featured-post-text">
-              <a href="{% url 'blog_post' post.id %}">
+              <a href="{% url 'blog_post' post.slug %}">
                 <p>
                   {{ post.description }} 
                 </p>
@@ -73,19 +73,19 @@
         {% for post in latest_posts %}
           <div class="latest">
             <div class="latest-post-img">
-              <a href="{% url 'blog_post' post.id %}">
+              <a href="{% url 'blog_post' post.slug %}">
                 <img src="{{ post.img_main.url }}" alt="Mini Blog Post img">
               </a>
             </div>
             <div class="latest-post-text-wrapper">
               <div class="latest-post-header">
-                <a href="{% url 'blog_post' post.id %}">
+                <a href="{% url 'blog_post' post.slug %}">
                   <h3>{{ post.title }}</h3>
                 </a>
               </div>
               <div>
                 <div class="latest-post-text">
-                  <a href="{% url 'blog_post' post.id %}">
+                  <a href="{% url 'blog_post' post.slug %}">
                     <p>
                       {{ post.description }}
                     </p>

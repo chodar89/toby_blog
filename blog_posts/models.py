@@ -18,7 +18,7 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=30, blank=False)
     header = models.CharField(max_length=150, blank=True)
-    slug = models.SlugField(null=True)
+    slug = models.SlugField(null=False, unique=True)
     description = models.CharField(max_length=350, blank=False)
     is_featured = models.BooleanField(default=False)
     is_posted = models.BooleanField(default=False)
@@ -32,7 +32,7 @@ class Post(models.Model):
     date = models.DateTimeField(default=timezone.now)
 
     def get_absolute_url(self):
-        return reverse('blog_post', kwargs={'id': self.id})
+        return reverse('blog_post', kwargs={'slug': self.slug})
     
     def get_clap_api_url(self):
         return reverse('clap_api', kwargs={'id': self.id})

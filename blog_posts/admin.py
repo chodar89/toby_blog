@@ -14,6 +14,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content', 'source')
     list_display = ('title', 'is_posted', 'is_featured', 'claps', 'views', 'date')
     list_editable = ('is_posted', 'is_featured')
+    prepopulated_fields = {'slug': ('title',)}
     list_per_page = 20
 
 admin.site.register(Tag, TagAdmin)

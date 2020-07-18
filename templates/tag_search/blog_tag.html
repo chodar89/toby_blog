@@ -12,19 +12,19 @@
       <div class="post-block">
         <div class="mini-post-container">
           <div class="mini-post-img">
-            <a href="{% url 'blog_post' post.id %}">
+            <a href="{% url 'blog_post' post.slug %}">
               <img src="{{ post.img_main.url }}" alt="" srcset="">
             </a>
           </div>
           <div class="mini-post-content">
             <div class="mini-post-text-wrapper">
               <div class="mini-post-header">
-                <a href="{% url 'blog_post' post.id %}">
+                <a href="{% url 'blog_post' post.slug %}">
                   <h3>{{post.title}}</h3>
                 </a>
               </div>
               <div class="mini-post-text">
-                <a href="{% url 'blog_post' post.id %}">
+                <a href="{% url 'blog_post' post.slug %}">
                   <p>{{ post.description }}</p>
                 </a>
               </div>
