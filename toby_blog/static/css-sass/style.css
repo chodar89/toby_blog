@@ -1859,8 +1859,8 @@ nav a {
 }
 
 #hero > .about-hero-img > img {
-  -o-object-position: 100% 28%;
-     object-position: 100% 28%;
+  -o-object-position: left;
+     object-position: left;
 }
 
 .contact-form form {
@@ -2033,6 +2033,16 @@ nav a {
 .thankyou-gif {
   margin: auto;
   max-width: 450px;
+}
+
+.back-home {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-home a {
+  text-decoration: none;
+  color: #2de1c2;
 }
 
 footer {
