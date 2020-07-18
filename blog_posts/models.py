@@ -18,6 +18,7 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=30, blank=False)
     header = models.CharField(max_length=150, blank=True)
+    slug = models.SlugField(null=True)
     description = models.CharField(max_length=350, blank=False)
     is_featured = models.BooleanField(default=False)
     is_posted = models.BooleanField(default=False)
