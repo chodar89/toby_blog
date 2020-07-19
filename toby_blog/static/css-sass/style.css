@@ -1605,6 +1605,22 @@ nav a {
      object-fit: cover;
 }
 
+#blog-post-content .gif-l-s {
+  float: left;
+  max-width: 340px;
+  margin: 20px 20px 20px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#blog-post-content .gif-r-s {
+  float: right;
+  max-width: 340px;
+  margin: 20px 0 20px 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #blog-post-content .img-c {
   width: 800px;
   height: 400px;
@@ -1830,6 +1846,10 @@ nav a {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+  #blog-post-content .gif-l-s,
+  #blog-post-content .gif-r-s {
+    max-width: 100%;
   }
 }
 
