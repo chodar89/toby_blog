@@ -12,7 +12,7 @@ class HomeView(View):
     """
     template_name = 'index.html'
     def get(self, request, *args, **kwargs):
-        featured_post = Post.objects.filter(is_featured=True).order_by('-date')[:1]
+        featured_post = Post.objects.filter(is_posted=True).filter(is_featured=True).order_by('-date')[:1]
         latest_posts = Post.objects.filter(is_posted=True).order_by('-date')[:2]
         context = {
             'featured_post': featured_post,
