@@ -3,6 +3,6 @@ from django.urls import path
 from .views import ThankYouView, ThankYouSubscribeView
 
 urlpatterns = [
-    path('thankyou', ThankYouView.as_view(template_name='about/about.html'), name='thank_you'),
+    path('thankyou', ThankYouView.as_view(), name='thank_you'),
     path('thankyousub', ThankYouSubscribeView.as_view(), name='thank_you_sub'),
 ]
