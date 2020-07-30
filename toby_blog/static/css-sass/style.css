@@ -1006,8 +1006,7 @@ nav a {
 }
 
 .no-tags {
-  position: absolute;
-  top: 40%;
+  margin-top: 250px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: center;
@@ -1118,7 +1117,7 @@ nav a {
   font-family: "Montserrat", sans-serif;
 }
 
-#search-card form input[type="text"]:focus,
+#search-card form input[type='text']:focus,
 #search-card form textarea:focus {
   -webkit-box-shadow: 0 0 5px #2de1c2;
           box-shadow: 0 0 5px #2de1c2;
@@ -1227,6 +1226,9 @@ nav a {
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 110px;
+  }
+  .no-tags {
+    margin-top: 140px;
   }
   #search-card {
     display: -webkit-box;
